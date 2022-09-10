@@ -1,2 +1,2 @@
-# dnd-stretch-tech (WIP)
+# dnd-stretch-tech (Working Title)
 A Dungeons and Dragons Character Generator App
