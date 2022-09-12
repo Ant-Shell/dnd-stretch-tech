@@ -1,16 +1,12 @@
-import React from 'react';
+import React, {FC} from 'react';
 import '../Styles/App.css';
 
-const App = () => {
+const App: FC = () => {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Test ... 1, 2, 3
-        </p>
-      </header>
     </div>
-  );
-}
+    );
+  }
 
-export default App;
+export { App } ;
