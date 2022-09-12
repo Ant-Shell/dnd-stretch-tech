@@ -1,11 +1,15 @@
 import React, {FC} from 'react';
 import '../Styles/App.css';
+import Nav from './Nav'
+import MainSection from "./MainSection"
 
 const App: FC = () => {
 
   return (
-    <div className="App">
-    </div>
+    <main>
+      <Nav />
+      <MainSection />
+    </main>
     );
   }
 
