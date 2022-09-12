@@ -1,0 +1,14 @@
+.character-creator {
+    border-style: solid;
+    width: 400px;
+    height: 800px;
+}
+
+.ability-score-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ability-score {
+    width: 20px;
+}

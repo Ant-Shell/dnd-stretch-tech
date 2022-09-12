@@ -4,7 +4,21 @@ import "../Styles/CharacterCreator.css"
 const CharacterCreator = () => {
     return (
         <div className="character-creator">
-            This is the Character Creator.
+            <h3>This is the Character Creator.</h3>
+            Name: <input/>
+            Race: <input/>
+            Class: <input/>
+            HP: <input/>
+            AC: <input/>
+            <button>Randomize</button>
+            <div className="ability-score-wrapper">
+                <div>STR <input className="ability-score"/></div>
+                <div>CON <input className="ability-score"/></div>
+                <div>DEX <input className="ability-score"/></div>
+                <div>WIS <input className="ability-score"/></div>
+                <div>INT <input className="ability-score"/></div>
+                <div>CHA <input className="ability-score"/></div>
+            </div>
         </div>
     )
 }

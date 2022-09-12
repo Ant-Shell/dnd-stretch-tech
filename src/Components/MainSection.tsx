@@ -2,13 +2,17 @@ import React from "react"
 import CharacterCreator from "./CharacterCreator"
 import BlurbBox from "./BlurbBox"
 import Party from "./Party"
+import "../Styles/MainSection.css"
 
-const MainSection = () => {
+type Props = {
+    monsters: {name: string}[]
+}
+
+const MainSection = (props: Props) => {
     return (
         <div className="main-section">
-            This is the main section.
             <CharacterCreator />
-            <BlurbBox />
+            <BlurbBox monsters={props.monsters}/>
             <Party />
         </div>
     )
