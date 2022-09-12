@@ -1,0 +1,8 @@
+.party-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-style: solid;
+    width: 400px;
+    height: 800px;
+}

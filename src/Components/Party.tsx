@@ -1,4 +1,5 @@
 import React from "react"
+import "../Styles/Party.css"
 
 const Party = () => {
     return (
