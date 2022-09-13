@@ -1,0 +1,17 @@
+.monsters-list {
+    border-style: solid;
+    width: 25vw;
+    height: 80vh;
+    overflow: auto;
+}
+
+.single-monster {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: solid;
+    margin: 0px;
+    height: 20px;
+    padding: 3px;
+    padding-left: 20px;
+}

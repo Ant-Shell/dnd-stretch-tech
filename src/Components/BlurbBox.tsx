@@ -2,25 +2,19 @@ import React from "react"
 import { blurbs } from "../ClassBlurbs"
 import "../Styles/BlurbBox.css"
 
-type Props = {
-    monsters: {name: string}[]
-}
+// type Props = {
+//     monsters: {name: string}[]
+// }
 
-const BlurbBox = (props: Props) => {
+const BlurbBox = () => {
 
     // Conditonal: If class state === x
     // render appropriate blurb
 
-    console.log(props.monsters)
-
-    let monsterList = props.monsters.map(monster => {
-        return <p>{monster.name}</p>
-    })
 
     return (
         <div className="blurb-box">
             Here is where some blurbs will go.<br></br>
-            {monsterList}
         </div>
     )
 }

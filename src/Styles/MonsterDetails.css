@@ -1,0 +1,81 @@
+.monster-details {
+    border-style: solid;
+    width: 70vw;
+    height: 80vh;
+}
+
+.stat-ability-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.monster-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-style: solid;
+    width: 400px;
+    height: 70vh;
+    margin: 10px;
+}
+
+.monster-stat {
+    display: flex;
+    justify-content: center;
+    height: 20px;
+    font-size: 25px;
+    margin: 15px;
+}
+
+.stat-title {
+    font-size: 30px;
+    margin: 15px;
+    margin-top: -25px;
+}
+
+.special-abilities {
+    border-style: solid;
+    width: 40vw;
+    padding: 10px;
+    margin: 10px;
+    overflow: auto;
+}
+
+.special-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: auto;
+    height: 62vh;
+}
+
+.special {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 125%;
+    border-style: solid;
+    margin: 5px;
+    width: 300px;
+    height: 170px;
+    overflow: auto;
+}
+
+.special-ability-name {
+    margin-top: 10px;
+    
+}
+
+.special-description {
+    margin-top: 0px;
+    padding: 5px;
+}
+
+.proficiencies {
+    border-top: solid;
+    width: 400px;
+    height: 215px;
+    font-size: 25px;
+    overflow: auto;
+}
