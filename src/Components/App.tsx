@@ -18,11 +18,13 @@ const App: FC = () => {
 
   useEffect(() => {
     fetchMonsters()
-    .then((data: any) => setMonsters(data.results))
+    .then((data: any) => {
+      console.log(data.results)
+      setMonsters(data.results)
+    })
   }, [])
 
   const monsterViewHandler = () => {
-    console.log('SUP')
         if (!monsterView) {
           setMonsterView(true)
         } else {
@@ -33,7 +35,7 @@ const App: FC = () => {
   return (
     <main>
       <Nav monsterViewHandler={() => monsterViewHandler()}/>
-      {(!monsterView) && <MainSection monsters={monsters}/>}
+      {(!monsterView) && <MainSection />}
       {(monsterView) && <MonsterSection monsters={monsters}/>}
     </main>
     );

@@ -1,33 +1,62 @@
-import React, { useState } from "react"
+import React, { useState, FC } from "react"
 import "../Styles/MonsterDetails.css"
 
-type MonsterStructure = {
-    name: string
+type Props = {
+    currentMonster: {
+        name: string
+    url: string
+    challenge_rating: number                //  <--- update here
+    size: string
+    type: string
+    alignment: string
+    languages: string
+    armor_class: number
+    hit_points: number
+    xp: number
+    proficiencies: {
+        value: number 
+        proficiency: {
+            index: string
+            name: string
+        }
+    }[]
+    special_abilities: {
+        name: string
+        desc: string
+    }[]
+    }
 }
 
-const MonsterDetails = () => {
+const MonsterDetails:FC<Props> = ({currentMonster}) => {
 
-    const [currentMonster, setCurrentMonster] = useState<MonsterStructure>({name: 'Bugbear'})
+    const proficiencies = currentMonster.proficiencies.map(prof => {
+        return <p>{prof.proficiency.name}: {prof.value}</p>
+    })
+
+    //  <div className="special"><h3 className="special-ability-name">Brute</h3> <p className="special-description">A melee weapon deals one extra die of its damage when the bugbear hits with it (included in the attack).</p></div>
+
+    const specialAbilities = currentMonster.special_abilities.map(spec => {
+        return <div className="special"><h3 className="special-ability-name">Brute</h3> <p className="special-description">A melee weapon deals one extra die of its damage when the bugbear hits with it (included in the attack).</p></div>
+    })
 
     return (
+        (currentMonster) &&
         <div className="monster-details">
             <h1>{currentMonster.name}</h1>
             <div className="stat-ability-wrapper">
                 <div className="monster-stats">
                     <h2 className="stat-title">{currentMonster.name} Stats</h2>
-                    <p className="monster-stat">Challenge Rating: 1</p>
-                    <p className="monster-stat">XP: 200</p>
-                    <p className="monster-stat">Size: Medium</p>
-                    <p className="monster-stat">Type: Humanoid</p>
-                    <p className="monster-stat">Subtype: Goblinoid</p>
-                    <p className="monster-stat">Alignment: Chaotic Evil</p>
-                    <p className="monster-stat">Languages: Common, Goblin</p>
-                    <p className="monster-stat">AC: 16</p>
-                    <p className="monster-stat">HP: 27</p>
+                    <p className="monster-stat">Challenge Rating: {currentMonster.challenge_rating}</p>
+                    <p className="monster-stat">XP: {currentMonster.xp}</p>
+                    <p className="monster-stat">Size: {currentMonster.size}</p>
+                    <p className="monster-stat">Type: {currentMonster.type}</p>
+                    <p className="monster-stat">Alignment: {currentMonster.alignment}</p>
+                    <p className="monster-stat">Languages: {currentMonster.languages}</p>
+                    <p className="monster-stat">AC: {currentMonster.armor_class}</p>
+                    <p className="monster-stat">HP: {currentMonster.hit_points}</p>
                     <div className="proficiencies">
                         <h3>Proficiencies</h3>
-                        <p>- Stealth: 6</p>
-                        <p>- Survival: 2</p>
+                        {proficiencies}
                     </div>
                 </div>
                 <div className="special-abilities">
