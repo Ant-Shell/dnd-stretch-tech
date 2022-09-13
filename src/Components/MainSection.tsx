@@ -12,7 +12,7 @@ const MainSection = (props: Props) => {
     return (
         <div className="main-section">
             <CharacterCreator />
-            <BlurbBox monsters={props.monsters}/>
+            <BlurbBox />
             <Party />
         </div>
     )

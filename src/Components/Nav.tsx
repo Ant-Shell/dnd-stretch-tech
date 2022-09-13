@@ -1,9 +1,19 @@
 import React from "react"
 import "../Styles/Nav.css"
 
-const Nav = () => {
+type Props = {
+    monsterViewHandler: () => void
+}
+
+const Nav = (props: Props) => {
+
+
+
     return (
-        <nav>Dungeons & Documents</nav>
+            <nav>
+                Dungeons & Documents
+                <button className="view-monster-page-button" onClick={() => props.monsterViewHandler()}>View Monster Manual</button>
+            </nav>     
     )
 }
 

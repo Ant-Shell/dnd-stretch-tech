@@ -2,6 +2,7 @@ import React, {FC, useState, useEffect} from 'react';
 import '../Styles/App.css';
 import Nav from './Nav'
 import MainSection from "./MainSection"
+import MonsterSection from "./MonsterSection"
 import { AppStateStructure } from "../types"
 import { fetchMonsters } from "../apiCalls"
 
@@ -10,8 +11,9 @@ const App: FC = () => {
   // give app state   vvvv
 
   const [monsters, setMonsters] = useState<AppStateStructure>([])
+  const [monsterView, setMonsterView] = useState<boolean>(false)
 
-  // useEffect foar fetch
+  // useEffect for fetch
   // set data to state      vvvv
 
   useEffect(() => {
@@ -19,11 +21,20 @@ const App: FC = () => {
     .then((data: any) => setMonsters(data.results))
   }, [])
 
+  const monsterViewHandler = () => {
+    console.log('SUP')
+        if (!monsterView) {
+          setMonsterView(true)
+        } else {
+          setMonsterView(false)
+        }
+  }
 
   return (
     <main>
-      <Nav />
-      <MainSection monsters={monsters}/>
+      <Nav monsterViewHandler={() => monsterViewHandler()}/>
+      {(!monsterView) && <MainSection monsters={monsters}/>}
+      {(monsterView) && <MonsterSection monsters={monsters}/>}
     </main>
     );
   }
