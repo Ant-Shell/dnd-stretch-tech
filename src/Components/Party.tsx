@@ -2,7 +2,7 @@ import React, { FC } from "react"
 import "../Styles/Party.css"
 
 type Props = {
-    party: {name: string, race: string, classs: string, hp: number, ac: number, str: number, con: number, dex: number, wis: number, int: number, cha: number, about: string}[]
+    party: {name: string, race: string, classs: string, hp: number, ac: number, str: number, con: number, dex: number, wis: number, int: number, cha: number, about: string}[], deleteMember(memberToDelete: string): void
 }
 
 const Party: FC<Props> = (props) => {
@@ -13,7 +13,7 @@ const Party: FC<Props> = (props) => {
                 <p>Name: {member.name} / Race: {member.race} / Class: {member.classs}</p>
                 <p>HP: {member.hp} / AC: {member.ac}</p>    
                 <p>STR: {member.str} / CON: {member.str} / DEX: {member.str} / WIS: {member.str} / INT: {member.str} / CHA: {member.str}</p>
-                <button>Delete</button>    
+                <button onClick={() => props.deleteMember(member.name)}>Delete</button>    
             </div>
         )
     })

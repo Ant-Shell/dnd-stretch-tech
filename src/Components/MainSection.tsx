@@ -29,13 +29,18 @@ const MainSection = () => {
         setParty([...party, character])
     }
 
-    // Clear and delete member buttons
+    // Clear and delete member button
+    const deleteMember = (memberToDelete: string): void => {
+        setParty(party.filter((member) => {
+            return member.name != memberToDelete
+        }))
 
+    };
     return (
         <div className="main-section">
-            <CharacterCreator submitForm={submitForm}/>
+            <CharacterCreator submitForm={submitForm} />
             <BlurbBox />
-            <Party party={party} />
+            <Party party={party} deleteMember={deleteMember} />
         </div>
     )
 }
