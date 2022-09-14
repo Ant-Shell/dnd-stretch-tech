@@ -45,9 +45,9 @@ const CharacterCreator: FC<Props> = (props: Props) => {
         <div className="character-creator">
             <h3>This is the Character Creator.</h3>
             <form onSubmit={event => props.submitForm(event, formData)}>
-            Name: <input type="text" id="name" onChange={event => handleChange(event)} />
-            Race: <select id="race">
-                        <option defaultValue="" disabled selected>Choose your race...</option>
+            Name: <input type="text" id="name" onChange={event => handleChange(event)} value={formData.name}/>
+            Race: <select id="race" >
+                    <option defaultValue={formData.race} disabled selected>Choose your race...</option>
                         <option value="Dragonborn">Dragonborn</option>
                         <option value="Dwarf">Dwarf</option>
                         <option value="Elf">Elf</option>
@@ -58,7 +58,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
                         <option value="Human">Human</option>
                         <option value="Tiefling">Tiefling</option>
                     </select>
-            Class: <select id="classs" onChange={(event) => props.setClass(event.target.value)}>
+            Class: <select id="classs" onChange={(event) => props.setClass(event.target.value)} value={formData.classs}>
                         <option defaultValue="" disabled selected>Choose your class...</option>
                         <option value="Barbarian">Barbarian</option>
                         <option value="Bard">Bard</option>
@@ -73,8 +73,8 @@ const CharacterCreator: FC<Props> = (props: Props) => {
                         <option value="Warlock">Warlock</option>
                         <option value="Wizard">Wizard</option>
                     </select>
-            <div>HP: <input type="text" id="hp" onChange={event => handleChange(event)}/></div>
-            <div>AC: <input type="text" id="ac" onChange={event => handleChange(event)}/></div>
+            <div>HP: <input type="text" id="hp" onChange={event => handleChange(event)} value={formData.hp}/></div>
+            <div>AC: <input type="text" id="ac" onChange={event => handleChange(event)} value={formData.ac}/></div>
             <div className="ability-score-wrapper">
                 <div>STR <input className="ability-score" type="text" id="str" onChange={event => handleChange(event)} value={formData.str}/></div>
                 <div>CON <input className="ability-score" type="text" id="con" onChange={event => handleChange(event)} value={formData.con}/></div>
@@ -82,8 +82,6 @@ const CharacterCreator: FC<Props> = (props: Props) => {
                 <div>WIS <input className="ability-score" type="text" id="wis" onChange={event => handleChange(event)} value={formData.wis} /></div>
                 <div>INT <input className="ability-score" type="text" id="int" onChange={event => handleChange(event)} value={formData.int}/></div>
                 <div>CHA <input className="ability-score" type="text" id="cha" onChange={event => handleChange(event)} value={formData.cha}/></div>
-                <div>About Me <input className="ability-score" type="text" id="about" onChange={event => handleChange(event)}/></div>
-
             </div>
                 About Me: 
                 <div><textarea className="about-me" id="about" onChange={(event: any) => handleChange(event)}/></div>

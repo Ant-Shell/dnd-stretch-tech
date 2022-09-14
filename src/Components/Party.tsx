@@ -12,7 +12,7 @@ const Party: FC<Props> = (props) => {
             <div className="party-member">
                 <p>Name: {member.name} / Race: {member.race} / Class: {member.classs}</p>
                 <p>HP: {member.hp} / AC: {member.ac}</p>    
-                <p>STR: {member.str} / CON: {member.str} / DEX: {member.str} / WIS: {member.str} / INT: {member.str} / CHA: {member.str}</p>
+                <p>STR: {member.str} / CON: {member.con} / DEX: {member.dex} / WIS: {member.wis} / INT: {member.int} / CHA: {member.cha}</p>
                 <button onClick={() => props.deleteMember(member.name)}>Delete</button>    
             </div>
         )
