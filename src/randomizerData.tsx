@@ -49,7 +49,5 @@ export const classes: string[] = [
     'Rogue',
     'Sorcerer',
     'Warlock',
-    'Wizard',
-    'Artificer',
-    'Blood Hunter'
+    'Wizard'
 ]

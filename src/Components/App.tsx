@@ -1,4 +1,4 @@
-import React, {FC, useState, useEffect} from 'react';
+import {FC, useState, useEffect} from 'react';
 import '../Styles/App.css';
 import Nav from './Nav'
 import MainSection from "./MainSection"
