@@ -11,8 +11,8 @@ const CharacterCreator: FC<Props> = (props: Props) => {
 
     const [formData, setFormData] = useState<{name: string, race: string, classs: string, hp: number, ac: number, str: number, con: number, dex: number, wis: number, int: number, cha: number, about: string}>({name: '', race: '', classs: '', hp: 0, ac: 0, str: 0, con: 0, dex: 0, wis: 0, int: 0, cha: 0, about: ''})
     const [classsValue, setClasssValue] = useState<string | undefined>(undefined)
-    const [randomizing, setRandomizing] = useState<boolean>(false)
     const [raceValue, setRaceValue] = useState<string | undefined>(undefined)
+    const [randomizing, setRandomizing] = useState<boolean>(false)
 
     // Had to make state for classValue and raceValue so we can toggle between choosing a class/race and randomizing one since their
     // values were based on formData (which took user-choice out of the equation since the values are constantly set to state).
