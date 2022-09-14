@@ -1,7 +1,7 @@
-import React, {FC, useState, useEffect} from 'react';
+import {FC, useState, useEffect} from 'react';
 import '../Styles/App.css';
 import Nav from './Nav'
-import MainSection from "./MainSection"
+import CharacterSection from "./CharacterSection"
 import MonsterSection from "./MonsterSection"
 import { AppStateStructure } from "../types"
 import { fetchMonsters } from "../apiCalls"
@@ -34,7 +34,7 @@ const App: FC = () => {
   return (
     <main>
       <Nav monsterViewHandler={() => monsterViewHandler()}/>
-      {(!monsterView) && <MainSection />}
+      {(!monsterView) && <CharacterSection />}
       {(monsterView) && <MonsterSection monsters={monsters}/>}
     </main>
     );
