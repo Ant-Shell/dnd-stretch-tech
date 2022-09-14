@@ -19,7 +19,6 @@ const App: FC = () => {
   useEffect(() => {
     fetchMonsters()
     .then((data: any) => {
-      console.log(data.results)
       setMonsters(data.results)
     })
   }, [])

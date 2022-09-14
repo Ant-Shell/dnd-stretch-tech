@@ -1,20 +1,24 @@
-import React from "react"
+import React, {FC} from "react"
 import { blurbs } from "../ClassBlurbs"
 import "../Styles/BlurbBox.css"
 
-// type Props = {
-//     monsters: {name: string}[]
-// }
+type Props = {
+    currentClass: string
+}
 
-const BlurbBox = () => {
+const BlurbBox:FC<Props> = ({ currentClass }) => {
 
-    // Conditonal: If class state === x
-    // render appropriate blurb
-
+   const theBlurb = blurbs.reduce((acc: any, blurb) => {
+        if (blurb[0] === currentClass) {
+            acc.push(blurb[1])
+        }
+        return acc
+   }, [])
 
     return (
         <div className="blurb-box">
-            Here is where some blurbs will go.<br></br>
+            {(currentClass) && <h1>The {currentClass}</h1>}
+            <article className="the-blurb">{theBlurb}</article>
         </div>
     )
 }

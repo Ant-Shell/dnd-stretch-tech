@@ -21,7 +21,6 @@ type MonsterStructure = {
     proficiencies: {
         value: number 
         proficiency: {
-            index: string
             name: string
         }
     }[]
@@ -36,21 +35,45 @@ const MonsterSection = (props: Props) => {
     const [currentMonster, setCurrentMonster] = useState<MonsterStructure>({
         name: 'Aboleth', 
         url: '/api/monsters/aboleth',
-        challenge_rating: 15,               // <--- here
-        size: "Medium", 
-        type: "Goblinoid",
-        alignment: "Chaotic Evil",
-        languages: "Goblinoid",
-        armor_class: 15,
-        hit_points: 60,
-        xp: 2,
+        challenge_rating: 10,               // <--- here
+        size: "Large", 
+        type: "aberration",
+        alignment: "lawful evil",
+        languages: "Deep Speech, telepathy 120 ft.",
+        armor_class: 17,
+        hit_points: 135,
+        xp: 5900,
         proficiencies: [{
-            value: 1,
+            value: 6,
             proficiency: {
-                index: "saving-throw-dex",
-                name: "Saving Throw: DEX"
+                name: "Saving Throw: CON"
             }
-        }],
+        },
+        {
+            value: 8,
+            proficiency: {
+                name: "Saving Throw: INT"
+            }
+        }, 
+        {
+            value: 6,
+            proficiency: {
+                name: "Saving Throw: WIS"
+            }
+        },
+        {
+            value: 12,
+            proficiency: {
+                name: "Skill: History"
+            }
+        },
+        {
+            value: 10,
+            proficiency: {
+                name: "Skill: History"
+            }
+        }
+    ],
         special_abilities: [{name: "Amphibious" , desc: "The aboleth can breathe air and water."}]
     })
 
@@ -63,7 +86,7 @@ const MonsterSection = (props: Props) => {
             setCurrentMonster(data)
         })
     }
-
+    console.log(currentMonster)
     return (
         <div className="monster-section">
             <MonstersList monsters={props.monsters} monsterHandler={monsterHandler}/>

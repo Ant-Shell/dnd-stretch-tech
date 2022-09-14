@@ -4,3 +4,8 @@
     width: 800px;
     overflow: auto;
 }
+
+.the-blurb {
+    font-size: 25px;
+    margin: 60px;
+}
