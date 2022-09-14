@@ -1,7 +1,8 @@
 .blurb-box {
     border-style: solid;
-    height: 800px;
-    width: 800px;
+    border-radius: 8px;
+    height: 80vh;
+    width: 30vw;
     overflow: auto;
 }
 
