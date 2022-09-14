@@ -2,7 +2,9 @@ import { FC } from "react"
 import "../Styles/Party.css"
 
 type Props = {
-    party: {name: string, race: string, classs: string, hp: number, ac: number, str: number, con: number, dex: number, wis: number, int: number, cha: number, about: string}[], deleteMember(memberToDelete: string): void
+    party: {name: string, race: string, classs: string, hp: number, ac: number, str: number, con: number, dex: number, wis: number, int: number, cha: number, about: string}[]
+    deleteMember(memberToDelete: string): void
+    killemAll(): void
 }
 
 const Party: FC<Props> = (props) => {
@@ -21,7 +23,7 @@ const Party: FC<Props> = (props) => {
     return (
         <div className="party-block">
             {partyList}
-            <button>Kill'em All</button>
+            <button onClick={() => props.killemAll()}>Kill'em All</button>
         </div>
     )
 }

@@ -5,6 +5,7 @@ import CharacterSection from "./CharacterSection"
 import MonsterSection from "./MonsterSection"
 import { AppStateStructure } from "../types"
 import { fetchMonsters } from "../apiCalls"
+import { Route } from "react-router-dom"
 
 const App: FC = () => {
 
@@ -34,8 +35,8 @@ const App: FC = () => {
   return (
     <main>
       <Nav monsterViewHandler={() => monsterViewHandler()}/>
-      {(!monsterView) && <CharacterSection />}
-      {(monsterView) && <MonsterSection monsters={monsters}/>}
+      <Route exact path="/" render={() => <CharacterSection/>}/>
+      <Route exact path="/monsters" render={() => <MonsterSection monsters={monsters}/>}/>
     </main>
     );
   }

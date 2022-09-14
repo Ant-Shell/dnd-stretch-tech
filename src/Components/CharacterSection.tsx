@@ -22,14 +22,17 @@ const CharacterSection:FC = () => {
         setParty(party.filter((member) => {
             return member.name != memberToDelete
         }))
-
     }
-    
+
+    const killemAll = () => {
+        setParty([])
+    }
+
     return (
         <div className="main-section">
             <CharacterCreator submitForm={submitForm} setClass={setClass} />
             <BlurbBox currentClass={currentClass}/>
-            <Party party={party} deleteMember={deleteMember} />
+            <Party party={party} deleteMember={deleteMember} killemAll={killemAll}/>
         </div>
     )
 }

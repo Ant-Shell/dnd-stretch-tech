@@ -1,5 +1,6 @@
 import React from "react"
 import "../Styles/Nav.css"
+import { Link } from "react-router-dom"
 
 type Props = {
     monsterViewHandler: () => void
@@ -7,16 +8,22 @@ type Props = {
 
 const Nav = (props: Props) => {
 
-
+    let url = window.location.href.slice(-8)
+    let buttonName = 'View Monster Manual'
+    
+    if (url === 'monsters') {
+        url = ''
+        buttonName = 'View Character Creator'
+    } else {
+        url = 'monsters'
+    }
 
     return (
             <nav>
                 Dungeons & Documents
-                <button className="view-monster-page-button" onClick={() => props.monsterViewHandler()}>View Monster Manual</button>
+                <Link to={`/${url}`}><button className="view-monster-page-button" onClick={() => props.monsterViewHandler()}>{buttonName}</button></Link>
             </nav>     
     )
 }
 
 export default Nav
-
-// Button to toggle view between Monster Manual and Character Creator
