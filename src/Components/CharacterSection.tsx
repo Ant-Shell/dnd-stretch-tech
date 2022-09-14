@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { FC, useState } from "react"
 import CharacterCreator from "./CharacterCreator"
 import BlurbBox from "./BlurbBox"
 import Party from "./Party"
@@ -7,7 +7,7 @@ import { PartyStructure } from "../types"
 
 
 
-const MainSection = () => {
+const CharacterSection:FC = () => {
 
 
     const [currentClass, setClass] = useState<string>('')
@@ -23,18 +23,15 @@ const MainSection = () => {
             return member.name != memberToDelete
         }))
 
-    };
+    }
+    
     return (
         <div className="main-section">
-            <CharacterCreator submitForm={submitForm} setClass={setClass} currentClass={currentClass}/>
+            <CharacterCreator submitForm={submitForm} setClass={setClass} />
             <BlurbBox currentClass={currentClass}/>
             <Party party={party} deleteMember={deleteMember} />
         </div>
     )
 }
 
-export default MainSection
-
-// Child Components: CharacterCreator, BlurbBox, Party
-
-// Need to pass CharacterCreator (and Party) component parameters down as props from App
+export default CharacterSection

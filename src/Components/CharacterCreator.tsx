@@ -5,7 +5,6 @@ import { names, races, classes }from "../randomizerData"
 type Props = {
     submitForm: (event: React.FormEvent<HTMLFormElement>, character: object) => void
     setClass: (newState: string) => void
-    currentClass: string
 }
 
 const CharacterCreator: FC<Props> = (props: Props) => {
@@ -27,12 +26,15 @@ const CharacterCreator: FC<Props> = (props: Props) => {
     // If "randomizing" is false, the value attributes are set back to undefined, allowing the user to select an option which
     // intrisically sets the values of the respective 'select' tags.
 
+    const clearInputs = (event: any) => {
+        event.preventDefault()
+        setFormData({name: '', race: '', classs: '', hp: 0, ac: 0, str: 0, con: 0, dex: 0, wis: 0, int: 0, cha: 0, about: ''})
+    }
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         event.preventDefault()
         setFormData({ ...formData, [event.target.id]: event.target.value })
     }
-
 
     const randoNumbers = (min: number, max: number) => {
         min = Math.ceil(min);
@@ -50,6 +52,11 @@ const CharacterCreator: FC<Props> = (props: Props) => {
     setFormData({name: randoData(names),race: randoData(races), classs: randoData(classes), hp: randoNumbers(1, 100), ac: randoNumbers(1, 20), str: randoNumbers(1, 20), con: randoNumbers(1, 20), dex: randoNumbers(1, 20), wis: randoNumbers(1, 20), int: randoNumbers(1, 20), cha: randoNumbers(1, 20), about: ''})
     }
 
+    const classValueHandler = (event: any) => {
+        props.setClass(event.target.value)
+        handleChange(event)
+    }
+    
     useEffect(() => {
         if (randomizing) {
             props.setClass(formData.classs)
@@ -60,16 +67,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
             setRaceValue(undefined)
         }
     })
-
-    const classValueHandler = (event: any) => {
-        props.setClass(event.target.value)
-        handleChange(event)
-    }
-
-    // set class value to a variable thats either undefined or formData.classs
-    // make a function that toggles that variable's value based on state of classValue
-    // toggle classValue upon 
-  
+    
     return (
         <div className="character-creator">
             <h3>This is the Character Creator.</h3>
@@ -102,19 +100,20 @@ const CharacterCreator: FC<Props> = (props: Props) => {
                         <option value="Warlock">Warlock</option>
                         <option value="Wizard">Wizard</option>
                     </select>
-            <div>HP: <input type="text" id="hp" onChange={event => handleChange(event)} value={formData.hp}/></div>
-            <div>AC: <input type="text" id="ac" onChange={event => handleChange(event)} value={formData.ac}/></div>
-            <div className="ability-score-wrapper">
-                <div>STR <input className="ability-score" type="text" id="str" onChange={event => handleChange(event)} value={formData.str}/></div>
-                <div>CON <input className="ability-score" type="text" id="con" onChange={event => handleChange(event)} value={formData.con}/></div>
-                <div>DEX <input className="ability-score" type="text" id="dex" onChange={event => handleChange(event)} value={formData.dex} /></div>
-                <div>WIS <input className="ability-score" type="text" id="wis" onChange={event => handleChange(event)} value={formData.wis} /></div>
-                <div>INT <input className="ability-score" type="text" id="int" onChange={event => handleChange(event)} value={formData.int}/></div>
-                <div>CHA <input className="ability-score" type="text" id="cha" onChange={event => handleChange(event)} value={formData.cha}/></div>
-            </div>
-                About Me: 
-                <div><textarea className="about-me" id="about" onChange={(event: any) => handleChange(event)}/></div>
-            <button type="submit">SUBMIT</button>
+                <div>HP: <input type="text" id="hp" onChange={event => handleChange(event)} value={formData.hp}/></div>
+                <div>AC: <input type="text" id="ac" onChange={event => handleChange(event)} value={formData.ac}/></div>
+                <div className="ability-score-wrapper">
+                    <div>STR <input className="ability-score" type="text" id="str" onChange={event => handleChange(event)} value={formData.str}/></div>
+                    <div>CON <input className="ability-score" type="text" id="con" onChange={event => handleChange(event)} value={formData.con}/></div>
+                    <div>DEX <input className="ability-score" type="text" id="dex" onChange={event => handleChange(event)} value={formData.dex} /></div>
+                    <div>WIS <input className="ability-score" type="text" id="wis" onChange={event => handleChange(event)} value={formData.wis} /></div>
+                    <div>INT <input className="ability-score" type="text" id="int" onChange={event => handleChange(event)} value={formData.int}/></div>
+                    <div>CHA <input className="ability-score" type="text" id="cha" onChange={event => handleChange(event)} value={formData.cha}/></div>
+                </div>
+                    About Me: 
+                    <div><textarea className="about-me" id="about" onChange={(event: any) => handleChange(event)}/></div>
+                <button type="submit">SUBMIT</button>
+                <button onClick={(event: any) => clearInputs(event)}>Clear</button>
             </form>
             <button onClick={(event: any) => randomize(event)}>Randomize</button>
         </div>
