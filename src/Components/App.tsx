@@ -12,7 +12,6 @@ const App: FC = () => {
   // give app state   vvvv
 
   const [monsters, setMonsters] = useState<AppStateStructure>([])
-  const [monsterView, setMonsterView] = useState<boolean>(false)
 
   // useEffect for fetch
   // set data to state      vvvv
@@ -24,17 +23,10 @@ const App: FC = () => {
     })
   }, [])
 
-  const monsterViewHandler = () => {
-        if (!monsterView) {
-          setMonsterView(true)
-        } else {
-          setMonsterView(false)
-        }
-  }
 
   return (
     <main>
-      <Nav monsterViewHandler={() => monsterViewHandler()}/>
+      <Nav />
       <Route exact path="/" render={() => <CharacterSection/>}/>
       <Route exact path="/monsters" render={() => <MonsterSection monsters={monsters}/>}/>
     </main>

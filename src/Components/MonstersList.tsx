@@ -1,4 +1,4 @@
-import React from "react"
+import { FC } from "react"
 import "../Styles/MonstersList.css"
 
 type Props = {
@@ -6,7 +6,7 @@ type Props = {
     monsterHandler: (event: any) => void
 }
 
-const MonstersList = (props: Props) => {
+const MonstersList:FC<Props> = (props) => {
 
     const monsterList = props.monsters.map(monster => {
         return <p onClick={(event) => props.monsterHandler(event)} id={monster.name} className="single-monster">{monster.name}</p>

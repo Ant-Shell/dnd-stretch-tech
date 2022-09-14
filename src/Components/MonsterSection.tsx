@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState, FC } from "react"
 import MonstersList from "./MonstersList"
 import MonsterDetails from "./MonsterDetails"
 import "../Styles/MonsterSection.css"
@@ -10,7 +10,7 @@ type Props = {
 type MonsterStructure = {
     name: string
     url: string
-    challenge_rating: number                //  <--- update here
+    challenge_rating: number
     size: string
     type: string
     alignment: string
@@ -30,12 +30,12 @@ type MonsterStructure = {
     }[]
 }
 
-const MonsterSection = (props: Props) => {
+const MonsterSection:FC<Props> = (props) => {
 
     const [currentMonster, setCurrentMonster] = useState<MonsterStructure>({
         name: 'Aboleth', 
         url: '/api/monsters/aboleth',
-        challenge_rating: 10,               // <--- here
+        challenge_rating: 10,
         size: "Large", 
         type: "aberration",
         alignment: "lawful evil",
@@ -82,11 +82,10 @@ const MonsterSection = (props: Props) => {
         fetch(`https://www.dnd5eapi.co${theMonster?.url}`)
         .then(response => response.json())
         .then(data => {
-            console.log(data)
             setCurrentMonster(data)
         })
     }
-    console.log(currentMonster)
+
     return (
         <div className="monster-section">
             <MonstersList monsters={props.monsters} monsterHandler={monsterHandler}/>
