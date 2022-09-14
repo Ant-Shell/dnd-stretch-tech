@@ -11,7 +11,7 @@ type Props = {
 const CharacterCreator: FC<Props> = (props: Props) => {
 
     const [formData, setFormData] = useState<{name: string, race: string, classs: string, hp: number, ac: number, str: number, con: number, dex: number, wis: number, int: number, cha: number, about: string}>({name: '', race: '', classs: '', hp: 0, ac: 0, str: 0, con: 0, dex: 0, wis: 0, int: 0, cha: 0, about: ''})
-
+   
 
    const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     event.preventDefault()
@@ -26,12 +26,13 @@ const CharacterCreator: FC<Props> = (props: Props) => {
     }
 
     const randoData = (data: string[]) => {
-        return names[Math.floor(Math.random() * (data.length))]
+        return data[Math.floor(Math.random() * (data.length))]
     }
 
     const randomize = (event: any) => {
     event.preventDefault()
     console.log(formData)
+  
     setFormData({name: randoData(names),race: randoData(races), classs: randoData(classes), hp: randoNumbers(1, 100), ac: randoNumbers(1, 20), str: randoNumbers(1, 20), con: randoNumbers(1, 20), dex: randoNumbers(1, 20), wis: randoNumbers(1, 20), int: randoNumbers(1, 20), cha: randoNumbers(1, 20), about: ''})
     console.log('2', formData)
     // const submitForm = (event: React.FormEvent<HTMLFormElement>) => {
@@ -46,7 +47,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
             <h3>This is the Character Creator.</h3>
             <form onSubmit={event => props.submitForm(event, formData)}>
             Name: <input type="text" id="name" onChange={event => handleChange(event)} value={formData.name}/>
-            Race: <select id="race" >
+            Race: <select id="race" value={formData.race}>
                     <option defaultValue={formData.race} disabled selected>Choose your race...</option>
                         <option value="Dragonborn">Dragonborn</option>
                         <option value="Dwarf">Dwarf</option>
