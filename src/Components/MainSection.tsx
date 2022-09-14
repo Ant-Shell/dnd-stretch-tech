@@ -9,6 +9,8 @@ import { PartyStructure } from "../types"
 
 const MainSection = () => {
 
+
+    const [currentClass, setClass] = useState<string>('')
     const [party, setParty] = useState<PartyStructure>([{
             name: 'Krusk', 
             race: 'Orc', 
@@ -24,6 +26,11 @@ const MainSection = () => {
             about: ''
             }])
 
+            // This component will have a state of currentClass.
+            // We'll pass down a method to set that state to CharCreatorComponent.
+            // onChange of "Classs", this components state changes to that class.
+            // Pass state of currentClass down to BlurbBox.
+
     const submitForm = (event: React.FormEvent<HTMLFormElement>, character: any) => {
         event.preventDefault()
         setParty([...party, character])
@@ -33,8 +40,8 @@ const MainSection = () => {
 
     return (
         <div className="main-section">
-            <CharacterCreator submitForm={submitForm}/>
-            <BlurbBox />
+            <CharacterCreator submitForm={submitForm} setClass={setClass}/>
+            <BlurbBox currentClass={currentClass}/>
             <Party party={party} />
         </div>
     )

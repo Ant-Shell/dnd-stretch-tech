@@ -16,7 +16,6 @@ type Props = {
     proficiencies: {
         value: number 
         proficiency: {
-            index: string
             name: string
         }
     }[]
@@ -36,7 +35,8 @@ const MonsterDetails:FC<Props> = ({currentMonster}) => {
     //  <div className="special"><h3 className="special-ability-name">Brute</h3> <p className="special-description">A melee weapon deals one extra die of its damage when the bugbear hits with it (included in the attack).</p></div>
 
     const specialAbilities = currentMonster.special_abilities.map(spec => {
-        return <div className="special"><h3 className="special-ability-name">Brute</h3> <p className="special-description">A melee weapon deals one extra die of its damage when the bugbear hits with it (included in the attack).</p></div>
+        
+        return <div className="special"><h3 className="special-ability-name">{spec.name}</h3> <p className="special-description">{spec.desc}</p></div>
     })
 
     return (
@@ -56,20 +56,13 @@ const MonsterDetails:FC<Props> = ({currentMonster}) => {
                     <p className="monster-stat">HP: {currentMonster.hit_points}</p>
                     <div className="proficiencies">
                         <h3>Proficiencies</h3>
-                        {proficiencies}
+                        {(!proficiencies.length) ? <h3>No proficiencies.</h3> : proficiencies}
                     </div>
                 </div>
                 <div className="special-abilities">
                     <h2>Special Abilities</h2>
                     <div className="special-wrapper">
-                        <div className="special"><h3 className="special-ability-name">Brute</h3> <p className="special-description">A melee weapon deals one extra die of its damage when the bugbear hits with it (included in the attack).</p></div>
-                        <div className="special"><h3 className="special-ability-name">Surprise Attack</h3> <p className="special-description">If the bugbear surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 7 (2d6) damage fromthe attack.</p></div>
-                        <div className="special"><h3 className="special-ability-name">Brute</h3> <p className="special-description">A melee weapon deals one extra die of its damage when the bugbear hits with it (included in the attack).</p></div>
-                        <div className="special"><h3 className="special-ability-name">Surprise Attack</h3> <p className="special-description">If the bugbear surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 7 (2d6) damage fromthe attack.</p></div>
-                        <div className="special"><h3 className="special-ability-name">Brute</h3> <p className="special-description">A melee weapon deals one extra die of its damage when the bugbear hits with it (included in the attack).</p></div>
-                        <div className="special"><h3 className="special-ability-name">Surprise Attack</h3> <p className="special-description">If the bugbear surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 7 (2d6) damage fromthe attack.</p></div>
-                        <div className="special"><h3 className="special-ability-name">Brute</h3> <p className="special-description">A melee weapon deals one extra die of its damage when the bugbear hits with it (included in the attack).</p></div>
-                        <div className="special"><h3 className="special-ability-name">Surprise Attack</h3> <p className="special-description">If the bugbear surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 7 (2d6) damage fromthe attack.</p></div>
+                        {(!specialAbilities.length) ? <h2>No special abilities.</h2> : specialAbilities}
                     </div>
                 </div>
             </div>
