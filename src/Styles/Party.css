@@ -3,10 +3,10 @@
         flex-direction: column;
         align-items: center;
         align-content: center;
-        border-style: solid;
+        border: solid black;
         border-radius: 8px;
-        width: 15vw;
-        height: 78vh;
+        width: 26vw;
+        height: 82vh;
         overflow-wrap: break-word;
         box-shadow: 0 0 4px #000;
     }
@@ -16,7 +16,7 @@
 }
 
 .party-wrapper {
-    width: 15vw;
+    width: 26vw;
     height: 75vh;
     margin-bottom: 1vh;
     overflow-y: scroll;
