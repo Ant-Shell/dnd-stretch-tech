@@ -3,10 +3,12 @@
     border-radius: 8px;
     height: 80vh;
     width: 30vw;
-    overflow: auto;
+    overflow-y: scroll;
+    
 }
 
 .the-blurb {
     font-size: 25px;
     margin: 60px;
+    font-family: helvetica;
 }
