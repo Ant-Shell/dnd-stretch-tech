@@ -15,15 +15,17 @@ const Party: FC<Props> = (props) => {
                 <p>Name: {member.name} / Race: {member.race} / Class: {member.classs}</p>
                 <p>HP: {member.hp} / AC: {member.ac}</p>    
                 <p>STR: {member.str} / CON: {member.con} / DEX: {member.dex} / WIS: {member.wis} / INT: {member.int} / CHA: {member.cha}</p>
-                <button onClick={() => props.deleteMember(member.name)}>Delete</button>    
+                <button className="delete" onClick={() => props.deleteMember(member.name)}>Delete</button>    
             </div>
         )
     })
 
     return (
         <div className="party-block">
-            {partyList}
-            <button onClick={() => props.killemAll()}>Kill'em All</button>
+            <div className="party-wrapper">
+                {partyList}
+            </div>
+            <button id="killAll" onClick={() => props.killemAll()}>Kill'em All</button>
         </div>
     )
 }
