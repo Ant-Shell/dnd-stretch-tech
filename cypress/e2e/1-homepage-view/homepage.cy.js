@@ -6,7 +6,7 @@ describe('Dungeons and Documents!!! Kill all those classs\'', () => {
     })
   
     it('displays the main page with a consistent phrasing' , () => {
-        cy.contains('h3', 'This is the Character Creator.')
+        cy.contains('h3', 'Character Creator')
         cy.contains('nav', 'Dungeons & Documents')
     })
   
@@ -34,7 +34,7 @@ describe('Dungeons and Documents!!! Kill all those classs\'', () => {
         cy.get('input[id=cha]')
             .type('70')
         .get('button[type=submit]').click()
-        .get('.party-member').should('contain', 'INT: 050')
+        .get('.party-member').should('contain', 'INT: 50')
     })
 
     it('should display the bluuuuuuuurb', () => {
@@ -56,5 +56,19 @@ describe('Dungeons and Documents!!! Kill all those classs\'', () => {
         //it is leaving the selected options in.  Other times it will 
         //fully clear.  Something that is not a game breaker but worth
         //looking into.
+    })
+
+    it.skip('should not submit a blank form', () => {
+        cy.get('button[type=submit]').click()
+            .get('.party-member').should('contain', '')
+    })
+
+    it.skip('should not accept non-numbers in statistic fields', () => {
+
+    })
+
+    it('shoould take the user to the monster page on button click' , () => {
+        cy.get('button[id=changePage]').click()
+        cy.url().should('include', '/monsters')
     })
 })
