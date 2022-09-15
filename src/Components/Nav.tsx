@@ -8,6 +8,7 @@ const Nav:FC = () => {
 
     let buttonName = 'View Character Creator'
 
+
     if (url === 'monsters') {
         buttonName = 'View Monster Manual'
     }
@@ -19,7 +20,6 @@ const Nav:FC = () => {
             setUrl('monsters')
         }
     }
-
 
     return (
             <nav>

@@ -1,12 +1,34 @@
 .party-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-style: solid;
-    width: 400px;
-    height: 800px;
-}
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        border: solid black;
+        border-radius: 8px;
+        width: 26vw;
+        height: 82vh;
+        overflow-wrap: break-word;
+        box-shadow: 0 0 4px #000;
+    }
 
 .party-member {
-    border-style: solid;
+    border: 1px solid grey;
+}
+
+.party-wrapper {
+    width: 26vw;
+    height: 75vh;
+    margin-bottom: 1vh;
+    overflow-y: scroll;
+}
+
+.delete {
+    height: 2vh;
+    width: auto;
+}
+
+#killAll {
+    position: relative;
+    align-self: center;
+    background-color: salmon;
 }

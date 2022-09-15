@@ -70,7 +70,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
     
     return (
         <div className="character-creator">
-            <h3>This is the Character Creator.</h3>
+            <h3>Character Creator</h3>
             <form onSubmit={event => props.submitForm(event, formData)}>
             Name: <input type="text" id="name" onChange={event => handleChange(event)} value={formData.name}/>
             Race: <select id="race" value={raceValue} onChange={(event: any) => handleChange(event)} onClick={() => setRandomizing(false)}>
@@ -112,10 +112,10 @@ const CharacterCreator: FC<Props> = (props: Props) => {
                 </div>
                     About Me: 
                     <div><textarea className="about-me" id="about" onChange={(event: any) => handleChange(event)}/></div>
-                <button type="submit">SUBMIT</button>
-                <button onClick={(event: any) => clearInputs(event)}>Clear</button>
+                    <button id="submit" type="submit">SUBMIT</button>
+                    <button onClick={(event: any) => clearInputs(event)}>Clear</button>
             </form>
-            <button onClick={(event: any) => randomize(event)}>Randomize</button>
+            <button id="randoButton" onClick={(event: any) => randomize(event)}>Random</button>
         </div>
     )
 }
