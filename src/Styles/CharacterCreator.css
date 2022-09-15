@@ -37,7 +37,7 @@ form {
     width: 9vw;
     height: 1vh;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 18px;
     border: 1px solid grey;
     margin-bottom: 1vh;
     padding: 16px;
@@ -48,6 +48,9 @@ form {
     height: 14vh;
     width: 12vw;
     border-radius: 8px;
+    margin-bottom: 3vh;
+    font-size: 18px;
+    font-family: helvetica;
 }
 
 #ac, #hp {
@@ -62,7 +65,7 @@ form {
 select{
     background-color: white;
     padding: 16px;
-    font-size: 1vh;
+    font-size: 18px;
     border: 1px solid grey;
     border-radius: 8px;
     cursor: pointer;
@@ -72,12 +75,11 @@ select{
     font-size: 14px;
 }
 
-.character-creator button {
+button {
     margin: 1vh;
     height: 4vh;
     width: 6vw;
     cursor: pointer;
-    font-size: 30%;
     border: none;
     color: #fff;
     background-color: #00bda7;
