@@ -5,7 +5,7 @@ type Props = {
     currentMonster: {
         name: string
     url: string
-    challenge_rating: number                //  <--- update here
+    challenge_rating: number
     size: string
     type: string
     alignment: string

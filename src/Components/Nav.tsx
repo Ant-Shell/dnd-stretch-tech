@@ -1,27 +1,30 @@
-import React from "react"
+import { useState, FC } from "react"
 import "../Styles/Nav.css"
 import { Link } from "react-router-dom"
 
-type Props = {
-    monsterViewHandler: () => void
-}
+const Nav:FC = () => {
 
-const Nav = (props: Props) => {
+    const [url, setUrl] = useState<string>('monsters')
 
-    let url = window.location.href.slice(-8)
-    let buttonName = 'Monster Manual'
-    
+    let buttonName = 'View Character Creator'
+
+
     if (url === 'monsters') {
-        url = ''
-        buttonName = 'Character Creator'
-    } else {
-        url = 'monsters'
+        buttonName = 'View Monster Manual'
+    }
+
+    const pageHandler = () => {
+        if (url === 'monsters') {
+            setUrl('')
+        } else {
+            setUrl('monsters')
+        }
     }
 
     return (
             <nav>
                 Dungeons & Documents
-                <Link to={`/${url}`}><button className="view-monster-page-button" onClick={() => props.monsterViewHandler()}>{buttonName}</button></Link>
+                <Link to={`/${url}`}><button className="view-monster-page-button" onClick={() => pageHandler()}>{buttonName}</button></Link>
             </nav>     
     )
 }
