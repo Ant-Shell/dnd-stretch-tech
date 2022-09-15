@@ -4,9 +4,9 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    border-bottom: solid;
+    border-bottom: solid black;
     width: 100vw;
-    height: 12vh;
+    height: 9vh;
     font-size: 5vh;
     font-weight: 300;
     box-shadow: 0 0 4px #000;
@@ -16,7 +16,8 @@ nav {
 
 
 .view-monster-page-button {
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   height: 4vh;
   width: 8vw;
   cursor: pointer;
