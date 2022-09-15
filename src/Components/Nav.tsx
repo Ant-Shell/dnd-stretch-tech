@@ -9,11 +9,11 @@ type Props = {
 const Nav = (props: Props) => {
 
     let url = window.location.href.slice(-8)
-    let buttonName = 'View Monster Manual'
+    let buttonName = 'Monster Manual'
     
     if (url === 'monsters') {
         url = ''
-        buttonName = 'View Character Creator'
+        buttonName = 'Character Creator'
     } else {
         url = 'monsters'
     }
