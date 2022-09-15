@@ -2,33 +2,88 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: space-around;
     border-style: solid;
-    width: 400px;
-    height: 800px;
+    border-radius: 8px;
+    width: 15vw;
+    height: 80vh;
+    overflow-wrap: break-word;
+    overflow-y: scroll;
 }
 
 .ability-score-wrapper {
     display: flex;
     justify-content: space-around;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 
 .ability-score {
-    width: 20px;
+    width: 1vw;
+    height: 2vh;
+    border-radius: 8px;
+    border: 1px solid grey;
 }
 
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 60vh;
+    height: 65vh;
     justify-content: space-evenly;
 }
 
+#name{
+    width: 9vw;
+    height: 1vh;
+    border-radius: 8px;
+    font-size: 14px;
+    border: 1px solid grey;
+    margin-bottom: 1vh;
+    padding: 16px;
+}
+
 .about-me {
-    height: 100px;
-    width: 275px;
+    padding: 10px 10px 10px 10px;
+    height: 14vh;
+    width: 12vw;
+    border-radius: 8px;
 }
 
 #ac, #hp {
-    width: 25px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    border-radius: 8px;
+    border: 1px solid grey;
+    width: 1vw;
+    height: 2vh;
+}
+
+select{
+    background-color: white;
+    padding: 16px;
+    font-size: 1vh;
+    border: 1px solid grey;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 10vw;
+    height: 4vh;
+    margin-bottom: 1vh;
+    font-size: 14px;
+}
+
+.character-creator button {
+    margin: 1vh;
+    height: 4vh;
+    width: 6vw;
+    cursor: pointer;
+    font-size: 30%;
+    border: none;
+    color: #fff;
+    background-color: #00bda7;
+    border-radius: 16px;
+}
+
+#submit {
+    background-color: salmon;
 }

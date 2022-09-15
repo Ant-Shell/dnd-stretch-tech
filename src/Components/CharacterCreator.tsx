@@ -112,7 +112,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
                 </div>
                     About Me: 
                     <div><textarea className="about-me" id="about" onChange={(event: any) => handleChange(event)}/></div>
-                <button type="submit">SUBMIT</button>
+                <button id="submit"type="submit">SUBMIT</button>
                 <button onClick={(event: any) => clearInputs(event)}>Clear</button>
             </form>
             <button onClick={(event: any) => randomize(event)}>Randomize</button>
