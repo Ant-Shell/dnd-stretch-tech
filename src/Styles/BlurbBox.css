@@ -1,14 +1,14 @@
 .blurb-box {
-    border-style: solid;
+    border: solid black;
     border-radius: 8px;
-    height: 78vh;
-    width: 30vw;
+    height: 82vh;
+    width: 36vw;
     overflow-y: scroll;
     box-shadow: 0 0 4px #000;
 }
 
 .the-blurb {
-    font-size: 25px;
+    font-size: 18px;
     margin: 60px;
     font-family: 'EB Garamond', serif;
 }
