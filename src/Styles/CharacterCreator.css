@@ -2,9 +2,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-style: solid;
-    width: 400px;
-    height: 800px;
+    align-content: space-around;
+    border: solid black;
+    border-radius: 8px;
+    width: 26vw;
+    height: 82vh;
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+    box-shadow: 0 0 4px #000;
 }
 
 .ability-score-wrapper {
@@ -13,22 +18,82 @@
 }
 
 .ability-score {
-    width: 20px;
+    width: 2vw;
+    height: 2vh;
+    border-radius: 8px;
+    border: 1px solid grey;
 }
+
+
 
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 60vh;
+    height: 65vh;
     justify-content: space-evenly;
 }
 
+#name{
+    border-radius: 8px;
+    border: 1px solid grey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    justify-content: center;
+}
+
 .about-me {
-    height: 100px;
-    width: 275px;
+    padding: 10px 10px 10px 10px;
+    height: 14vh;
+    width: 12vw;
+    border-radius: 8px;
+    margin-bottom: 3vh;
+    font-size: 16px;
+    font-family: 'EB Garamond', serif;
 }
 
 #ac, #hp {
-    width: 25px;
+ 
+    border-radius: 8px;
+    border: 1px solid grey;
+    width: 3vw;
+    height: 3vh;
+}
+
+h3{
+    font-weight: bold;
+    font-size: 24px;
+}
+select{
+    background-color: white;
+    padding: 16px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 10vw;
+    height: 5vh;
+    padding-bottom: 1vh;
+    margin-bottom: 1vh;
+    font-size: 12px;
+}
+
+button {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    height: 3vh;
+    width: 6vw;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    background-color: #00bda7;
+    border-radius: 16px;
+    font-size: 12px;
+    margin-bottom: 1vh;
+}
+#randoButton {
+    margin: 1vh;
+}
+#submit {
+    background-color: salmon;
 }
