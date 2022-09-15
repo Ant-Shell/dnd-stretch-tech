@@ -6,11 +6,11 @@ const Nav:FC = () => {
 
     const [url, setUrl] = useState<string>('monsters')
 
-    let buttonName = 'View Character Creator'
+    let buttonName = 'Character Creator'
 
 
     if (url === 'monsters') {
-        buttonName = 'View Monster Manual'
+        buttonName = 'Monster Manual'
     }
 
     const pageHandler = () => {

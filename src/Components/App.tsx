@@ -6,16 +6,28 @@ import MonsterSection from "./MonsterSection"
 import { AppStateStructure } from "../types"
 import { fetchMonsters } from "../apiCalls"
 import { Route } from "react-router-dom"
+import { PartyStructure, CharacterStructure } from "../types"
+
 
 const App: FC = () => {
 
-  // give app state   vvvv
-
   const [monsters, setMonsters] = useState<AppStateStructure>([])
+  const [party, setParty] = useState<PartyStructure>([])
 
-  // useEffect for fetch
-  // set data to state      vvvv
+    const submitForm = (event: React.FormEvent<HTMLFormElement>, character: CharacterStructure) => {
+        event.preventDefault()
+        setParty([...party, character])
+    }
 
+    const deleteMember = (memberToDelete: string): void => {
+        setParty(party.filter((member) => {
+            return member.name !== memberToDelete
+        }))
+    }
+
+    const killemAll = () => {
+        setParty([])
+    }
   useEffect(() => {
     fetchMonsters()
     .then((data: any) => {
@@ -23,14 +35,13 @@ const App: FC = () => {
     })
   }, [])
 
-
   return (
     <main>
       <Nav />
-      <Route exact path="/" render={() => <CharacterSection/>}/>
+      <Route exact path="/" render={() => <CharacterSection party={party} submitForm={submitForm} deleteMember={deleteMember} killemAll={killemAll}/>}/>
       <Route exact path="/monsters" render={() => <MonsterSection monsters={monsters}/>}/>
     </main>
-    );
+    )
   }
 
-export { App } ;
+export { App }

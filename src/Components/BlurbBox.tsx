@@ -8,12 +8,12 @@ type Props = {
 
 const BlurbBox:FC<Props> = ({ currentClass }) => {
 
-   const theBlurb = blurbs.reduce((acc: any, blurb) => {
+   const theBlurb = blurbs.reduce((acc, blurb) => {
         if (blurb[0] === currentClass) {
             acc.push(blurb[1])
         }
         return acc
-   }, [])
+   }, [] as Array<string>)
 
     return (
         <div className="blurb-box">
@@ -24,8 +24,4 @@ const BlurbBox:FC<Props> = ({ currentClass }) => {
 }
 
 export default BlurbBox
-
-// Should build an array of blurbs about each class and populate them when
-// that class is selected.
-// Get with Nick about blurbs.
 

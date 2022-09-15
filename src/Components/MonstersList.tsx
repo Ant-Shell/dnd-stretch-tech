@@ -3,7 +3,7 @@ import "../Styles/MonstersList.css"
 
 type Props = {
     monsters: {name: string}[]
-    monsterHandler: (event: any) => void
+    monsterHandler: (event: React.MouseEvent<HTMLParagraphElement, MouseEvent>) => void
 }
 
 const MonstersList:FC<Props> = (props) => {
