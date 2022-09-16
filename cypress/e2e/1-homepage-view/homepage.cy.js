@@ -55,10 +55,6 @@ describe('Dungeons and Documents!!! Kill all those classs\'', () => {
             .select('Bard')
         cy.get('button[id=clear]').click()
             .get('#name').should('contain', '')
-        //the clear button is not functioning 100% perfectly.  Often times
-        //it is leaving the selected options in.  Other times it will 
-        //fully clear.  Something that is not a game breaker but worth
-        //looking into.
     })
 
     it('should not submit a blank form', () => {

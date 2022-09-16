@@ -8,7 +8,6 @@ import { fetchMonsters } from "../apiCalls"
 import { Route } from "react-router-dom"
 import { PartyStructure, CharacterStructure } from "../types"
 
-
 const App: FC = () => {
 
   const [monsters, setMonsters] = useState<AppStateStructure>([])
@@ -28,7 +27,7 @@ const App: FC = () => {
     const killemAll = () => {
         setParty([])
     }
-    
+
   useEffect(() => {
     fetchMonsters()
     .then((data: any) => {

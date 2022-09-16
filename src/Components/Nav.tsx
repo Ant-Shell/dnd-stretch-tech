@@ -8,7 +8,6 @@ const Nav:FC = () => {
 
     let buttonName = 'Character Creator'
 
-
     if (url === 'monsters') {
         buttonName = 'Monster Manual'
     }

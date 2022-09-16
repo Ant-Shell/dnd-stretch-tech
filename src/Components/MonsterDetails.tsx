@@ -11,11 +11,11 @@ const MonsterDetails:FC<Props> = ({currentMonster, monsterSearchHandler}) => {
 
     const [searchInput, setsearchInput] = useState<string>("")
 
-    const proficiencies = currentMonster.proficiencies.map((prof:any) => {
+    const proficiencies = currentMonster.proficiencies.map((prof) => {
         return <p>{prof.proficiency.name}: {prof.value}</p>
     })
 
-    const specialAbilities = currentMonster.special_abilities.map((spec:any) => {
+    const specialAbilities = currentMonster.special_abilities.map((spec) => {
         
         return <div className="special"><h3 className="special-ability-name">{spec.name}</h3> <p className="special-description">{spec.desc}</p></div>
     })

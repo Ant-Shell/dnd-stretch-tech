@@ -29,8 +29,8 @@ const BlurbBox:FC<Props> = ({ currentClass, character }) => {
         <div className="blurb-box">
             {(currentClass) ? <h1>The {currentClass}</h1>: 
             <div>
-                <h1>Welcome to Dungeons & Documents</h1>
-                <p>Where are your character creation problems come to an end! To the left you will see the Character Creation Form. 
+                <h1>Welcome to Dungeons & Documents!</h1>
+                <p>Where all your character creation problems come to an end! To the left you will see the Character Creation Form. 
                     There you can fill out all the neccessary information and submit your character. 
                     Upon submission, your hero will appear in the "Party Block" to the right.
                     Don't feel like rolling dice or making those big decisions? Not to worry! 
