@@ -19,6 +19,8 @@ const CharacterCreator: FC<Props> = (props: Props) => {
 
     const clearInputs = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         event.preventDefault()
+        setRaceValue('')
+        setClasssValue('')
         setFormData({name: '', race: '', classs: '', hp: '', ac: '', str: '', con: '', dex: '', wis: '', int: '', cha: '', about: ''})
     }
 
