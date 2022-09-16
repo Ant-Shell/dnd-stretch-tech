@@ -6,6 +6,7 @@ import { CharacterStructure } from "../types"
 type Props = {
     submitForm: (event: React.FormEvent<HTMLFormElement>, character: CharacterStructure) => void
     setClass: (newState: string) => void
+    setCharacter: (param: CharacterStructure | undefined) => void
 }
 
 const CharacterCreator: FC<Props> = (props: Props) => {
@@ -37,6 +38,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
 
     const randomize = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     event.preventDefault()
+    props.setCharacter(undefined)
     setRandomizing(true)
     setFormData({name: randoData(names),race: randoData(races), classs: randoData(classes), hp: randoNumbers(1, 100), ac: randoNumbers(1, 20), str: randoNumbers(1, 20), con: randoNumbers(1, 20), dex: randoNumbers(1, 20), wis: randoNumbers(1, 20), int: randoNumbers(1, 20), cha: randoNumbers(1, 20), about: ''})
     }
