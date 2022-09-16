@@ -24,7 +24,7 @@ const Nav:FC = () => {
     return (
             <nav>
                 Dungeons & Documents
-                <Link to={`/${url}`}><button className="view-monster-page-button" onClick={() => pageHandler()}>{buttonName}</button></Link>
+                <Link to={`/${url}`}><button id="changePage" className="view-monster-page-button" onClick={() => pageHandler()}>{buttonName}</button></Link>
             </nav>     
     )
 }
