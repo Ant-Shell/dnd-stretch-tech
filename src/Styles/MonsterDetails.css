@@ -5,11 +5,20 @@
 }
 
 .search-bar {
-    margin-left: 250px;
+    margin-left: 300px;
+    border-radius: 10px;
+    height: 20px;
+    width: 180px;
+    margin-top: 30px;
+}
+
+.monster-search-button {
+    margin-left: 5px;
+    margin-top: 30px;
 }
 
 .current-monster {
-    margin-left: 450px;
+    margin-left: 600px;
 }
 
 .monster-details {
