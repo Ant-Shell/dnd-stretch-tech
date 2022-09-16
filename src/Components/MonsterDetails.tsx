@@ -42,7 +42,16 @@ const MonsterDetails:FC<Props> = ({currentMonster}) => {
     return (
         (currentMonster) &&
         <div className="monster-details">
-            <h1>{currentMonster.name}</h1>
+            <div className="search-bar-container">
+                <h1 className="current-monster">{currentMonster.name}</h1>
+                <input 
+                    type="text"
+                    placeholder="Search for Monster" 
+                    className="search-bar"
+                    id="search">
+                </input>
+                <button className="monster-search-button">SUBMIT</button>
+                </div>
             <div className="stat-ability-wrapper">
                 <div className="monster-stats">
                     <h2 className="stat-title">{currentMonster.name} Stats</h2>

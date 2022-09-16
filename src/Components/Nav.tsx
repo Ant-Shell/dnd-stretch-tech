@@ -23,8 +23,19 @@ const Nav:FC = () => {
 
     return (
             <nav>
-                Dungeons & Documents
-                <Link to={`/${url}`}><button className="view-monster-page-button" onClick={() => pageHandler()}>{buttonName}</button></Link>
+                <header>Dungeons & Documents</header>
+                <div className="button-container">
+                    <Link to={`/${url}`}><button className="view-monster-page-button" onClick={() => pageHandler()}>{buttonName}</button></Link>
+                </div>
+                {/* <div className="search-bar-container">
+                    <input 
+                        type="text"
+                        placeholder="Search for Monster" 
+                        className="search-bar"
+                        id="search">
+                    </input>
+                    <button className="monster-search-button">SUBMIT</button>
+                </div> */}
             </nav>     
     )
 }

@@ -1,3 +1,17 @@
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.search-bar {
+    margin-left: 100px;
+}
+
+.current-monster {
+    margin-left: 200px;
+}
+
 .monster-details {
     border-style: solid;
     width: 70vw;
