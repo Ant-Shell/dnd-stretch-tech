@@ -1,30 +1,19 @@
 import React, {FC, useState, ChangeEvent, useEffect} from "react"
 import "../Styles/CharacterCreator.css"
 import { names, races, classes }from "../randomizerData"
+import { CharacterStructure } from "../types"
 
 type Props = {
-    submitForm: (event: React.FormEvent<HTMLFormElement>, character: object) => void
+    submitForm: (event: React.FormEvent<HTMLFormElement>, character: CharacterStructure) => void
     setClass: (newState: string) => void
 }
 
 const CharacterCreator: FC<Props> = (props: Props) => {
 
-    const [formData, setFormData] = useState<{name: string, race: string, classs: string, hp: number, ac: number, str: number, con: number, dex: number, wis: number, int: number, cha: number, about: string}>({name: '', race: '', classs: '', hp: 0, ac: 0, str: 0, con: 0, dex: 0, wis: 0, int: 0, cha: 0, about: ''})
+    const [formData, setFormData] = useState<CharacterStructure>({name: '', race: '', classs: '', hp: 0, ac: 0, str: 0, con: 0, dex: 0, wis: 0, int: 0, cha: 0, about: ''})
     const [classsValue, setClasssValue] = useState<string | undefined>(undefined)
     const [raceValue, setRaceValue] = useState<string | undefined>(undefined)
     const [randomizing, setRandomizing] = useState<boolean>(false)
-
-    // Had to make state for classValue and raceValue so we can toggle between choosing a class/race and randomizing one since their
-    // values were based on formData (which took user-choice out of the equation since the values are constantly set to state).
-    // This caused either the randomizer to work or the ability to choose the class and race to work, not both.
-    // Used a "randomizing" state (set to a boolean) to determine the values of classValue and raceValue.
-    // If the randomize button is clicked, "randomizing" is set to true.
-    // If the user clicks on either the race or class dropdown, "randomizing" is set to false.
-    // Our useEffect then checks the "randomizing" state.
-    // If "randomizing" is true, classValue and raceValue are set to formData.class and/or formData.race, 
-    // which alters the respective value attributes and allows the randomize function to populate the values.
-    // If "randomizing" is false, the value attributes are set back to undefined, allowing the user to select an option which
-    // intrisically sets the values of the respective 'select' tags.
 
     const clearInputs = (event: any) => {
         event.preventDefault()
@@ -46,7 +35,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
         return data[Math.floor(Math.random() * (data.length))]
     }
 
-    const randomize = (event: any) => {
+    const randomize = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     event.preventDefault()
     setRandomizing(true)
     setFormData({name: randoData(names),race: randoData(races), classs: randoData(classes), hp: randoNumbers(1, 100), ac: randoNumbers(1, 20), str: randoNumbers(1, 20), con: randoNumbers(1, 20), dex: randoNumbers(1, 20), wis: randoNumbers(1, 20), int: randoNumbers(1, 20), cha: randoNumbers(1, 20), about: ''})
@@ -66,7 +55,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
             setClasssValue(undefined)
             setRaceValue(undefined)
         }
-    })
+    }, [randomizing, props, formData.classs, formData.race])
     
     return (
         <div className="character-creator">
@@ -115,7 +104,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
                     <button id="submit" type="submit">SUBMIT</button>
                     <button onClick={(event: any) => clearInputs(event)}>Clear</button>
             </form>
-            <button id="randoButton" onClick={(event: any) => randomize(event)}>Random</button>
+            <button id="randoButton" onClick={(event) => randomize(event)}>Random</button>
         </div>
     )
 }
