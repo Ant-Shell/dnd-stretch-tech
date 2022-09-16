@@ -1,18 +1,21 @@
-import { FC } from "react"
+import { FC, useState } from "react"
 import "../Styles/MonsterDetails.css"
 import { MonsterStructure } from "../types"
 
 type Props = {
     currentMonster: MonsterStructure
+    monsterSearchHandler: (monsterName:string) => void
 }
 
-const MonsterDetails:FC<Props> = ({currentMonster}) => {
+const MonsterDetails:FC<Props> = ({currentMonster, monsterSearchHandler}) => {
 
-    const proficiencies = currentMonster.proficiencies.map(prof => {
+    const [searchInput, setsearchInput] = useState<string>("")
+
+    const proficiencies = currentMonster.proficiencies.map((prof:any) => {
         return <p>{prof.proficiency.name}: {prof.value}</p>
     })
 
-    const specialAbilities = currentMonster.special_abilities.map(spec => {
+    const specialAbilities = currentMonster.special_abilities.map((spec:any) => {
         
         return <div className="special"><h3 className="special-ability-name">{spec.name}</h3> <p className="special-description">{spec.desc}</p></div>
     })
@@ -26,9 +29,11 @@ const MonsterDetails:FC<Props> = ({currentMonster}) => {
                     type="text"
                     placeholder="Search for Monster" 
                     className="search-bar"
-                    id="search">
+                    value={searchInput}
+                    id="search"
+                    onChange={(event) => setsearchInput(event.target.value)}>
                 </input>
-                <button className="monster-search-button">SUBMIT</button>
+                <button className="monster-search-button" onClick={() => monsterSearchHandler(searchInput)}>SUBMIT</button>
                 </div>
             <div className="stat-ability-wrapper">
                 <div className="monster-stats">

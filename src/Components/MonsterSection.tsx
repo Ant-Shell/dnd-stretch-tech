@@ -33,10 +33,19 @@ const MonsterSection:FC<Props> = (props) => {
         })
     }
 
+    const monsterSearchHandler = (monsterName:string) => {
+        const theMonster = props.monsters.find(monster => monster.name.toUpperCase() === monsterName.toUpperCase())
+        fetch(`https://www.dnd5eapi.co${theMonster?.url}`)
+        .then(response => response.json())
+        .then(data => {
+            setCurrentMonster(data)
+        })
+    }    
+
     return (
         <div className="monster-section">
             <MonstersList monsters={props.monsters} monsterHandler={monsterHandler}/>
-            <MonsterDetails currentMonster={currentMonster}/>
+            <MonsterDetails currentMonster={currentMonster} monsterSearchHandler={monsterSearchHandler}/>
         </div>
     )
 }
