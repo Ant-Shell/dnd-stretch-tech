@@ -1,30 +1,21 @@
 import React, {FC, useState, ChangeEvent, useEffect} from "react"
 import "../Styles/CharacterCreator.css"
 import { names, races, classes }from "../randomizerData"
+import { CharacterStructure } from "../types"
 
 type Props = {
-    submitForm: (event: React.FormEvent<HTMLFormElement>, character: object) => void
+    submitForm: (event: React.FormEvent<HTMLFormElement>, character: CharacterStructure) => void
     setClass: (newState: string) => void
+    setCharacter: (param: CharacterStructure | undefined) => void
 }
 
 const CharacterCreator: FC<Props> = (props: Props) => {
 
-    const [formData, setFormData] = useState<{name: string, race: string, classs: string, hp: string, ac: string, str: string, con: string, dex: string, wis: string, int: string, cha: string, about: string}>({name: '', race: '', classs: '', hp: '', ac: '', str: '', con: '', dex: '', wis: '', int: '', cha: '', about: ''})
+
+    const [formData, setFormData] = useState<CharacterStructure>({name: '', race: '', classs: '', hp: '', ac: '', str: '', con: '', dex: '', wis: '', int: '', cha: '', about: ''})
     const [classsValue, setClasssValue] = useState<string | undefined>(undefined)
     const [raceValue, setRaceValue] = useState<string | undefined>(undefined)
     const [randomizing, setRandomizing] = useState<boolean>(false)
-
-    // Had to make state for classValue and raceValue so we can toggle between choosing a class/race and randomizing one since their
-    // values were based on formData (which took user-choice out of the equation since the values are constantly set to state).
-    // This caused either the randomizer to work or the ability to choose the class and race to work, not both.
-    // Used a "randomizing" state (set to a boolean) to determine the values of classValue and raceValue.
-    // If the randomize button is clicked, "randomizing" is set to true.
-    // If the user clicks on either the race or class dropdown, "randomizing" is set to false.
-    // Our useEffect then checks the "randomizing" state.
-    // If "randomizing" is true, classValue and raceValue are set to formData.class and/or formData.race, 
-    // which alters the respective value attributes and allows the randomize function to populate the values.
-    // If "randomizing" is false, the value attributes are set back to undefined, allowing the user to select an option which
-    // intrisically sets the values of the respective 'select' tags.
 
     const clearInputs = (event: any) => {
         event.preventDefault()
@@ -46,8 +37,9 @@ const CharacterCreator: FC<Props> = (props: Props) => {
         return data[Math.floor(Math.random() * (data.length))]
     }
 
-    const randomize = (event: any) => {
+    const randomize = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     event.preventDefault()
+    props.setCharacter(undefined)
     setRandomizing(true)
     setFormData({name: randoData(names),race: randoData(races), classs: randoData(classes), hp: randoNumbers(20, 100).toString(), ac: randoNumbers(10, 20).toString(), str: randoNumbers(8, 20).toString(), con: randoNumbers(8, 20).toString(), dex: randoNumbers(8, 20).toString(), wis: randoNumbers(8, 20).toString(), int: randoNumbers(8, 20).toString(), cha: randoNumbers(8, 20).toString(), about: ''})
     }
@@ -66,7 +58,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
             setClasssValue(undefined)
             setRaceValue(undefined)
         }
-    })
+    }, [randomizing, props, formData.classs, formData.race])
     
     return (
         <div className="character-creator">
@@ -115,7 +107,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
                     <button id="submit" type="submit">SUBMIT</button>
                     <button id="clear" onClick={(event: any) => clearInputs(event)}>Clear</button>
             </form>
-            <button id="randoButton" onClick={(event: any) => randomize(event)}>Random</button>
+            <button id="randoButton" onClick={(event) => randomize(event)}>Random</button>
         </div>
     )
 }
