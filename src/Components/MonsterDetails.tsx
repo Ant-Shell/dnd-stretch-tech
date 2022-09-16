@@ -1,29 +1,9 @@
-import React, { useState, FC } from "react"
+import { FC } from "react"
 import "../Styles/MonsterDetails.css"
+import { MonsterStructure } from "../types"
 
 type Props = {
-    currentMonster: {
-        name: string
-    url: string
-    challenge_rating: number
-    size: string
-    type: string
-    alignment: string
-    languages: string
-    armor_class: number
-    hit_points: number
-    xp: number
-    proficiencies: {
-        value: number 
-        proficiency: {
-            name: string
-        }
-    }[]
-    special_abilities: {
-        name: string
-        desc: string
-    }[]
-    }
+    currentMonster: MonsterStructure
 }
 
 const MonsterDetails:FC<Props> = ({currentMonster}) => {
@@ -31,8 +11,6 @@ const MonsterDetails:FC<Props> = ({currentMonster}) => {
     const proficiencies = currentMonster.proficiencies.map(prof => {
         return <p>{prof.proficiency.name}: {prof.value}</p>
     })
-
-    //  <div className="special"><h3 className="special-ability-name">Brute</h3> <p className="special-description">A melee weapon deals one extra die of its damage when the bugbear hits with it (included in the attack).</p></div>
 
     const specialAbilities = currentMonster.special_abilities.map(spec => {
         

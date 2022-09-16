@@ -1,8 +1,9 @@
 import { FC } from "react"
 import "../Styles/Party.css"
+import { PartyStructure } from "../types"
 
 type Props = {
-    party: {name: string, race: string, classs: string, hp: number, ac: number, str: number, con: number, dex: number, wis: number, int: number, cha: number, about: string}[]
+    party: PartyStructure
     deleteMember(memberToDelete: string): void
     killemAll: () => void
 }
@@ -31,5 +32,3 @@ const Party: FC<Props> = (props) => {
 }
 
 export default Party
-
-// Child Component: PartyMember (includes stats from form inputs, and delete button)
