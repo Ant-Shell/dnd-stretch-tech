@@ -28,6 +28,7 @@ const App: FC = () => {
     const killemAll = () => {
         setParty([])
     }
+    
   useEffect(() => {
     fetchMonsters()
     .then((data: any) => {

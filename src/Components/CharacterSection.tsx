@@ -14,15 +14,14 @@ type Props = {
 
 const CharacterSection:FC<Props> = ({ party, submitForm, deleteMember, killemAll }) => {
 
-
     const [currentClass, setClass] = useState<string>('')
-    
+    const [character, setCharacter] = useState<CharacterStructure | undefined>(undefined)
 
     return (
         <div className="main-section">
-            <CharacterCreator submitForm={submitForm} setClass={setClass} />
-            <BlurbBox currentClass={currentClass}/>
-            <Party party={party} deleteMember={deleteMember} killemAll={killemAll}/>
+            <CharacterCreator submitForm={submitForm} setClass={setClass} setCharacter={setCharacter}/>
+            <BlurbBox currentClass={currentClass} character={character}/>
+            <Party party={party} deleteMember={deleteMember} killemAll={killemAll} setCharacter={setCharacter}/>
         </div>
     )
 }

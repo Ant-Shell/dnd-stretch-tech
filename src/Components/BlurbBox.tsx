@@ -1,12 +1,14 @@
 import {FC} from "react"
 import { blurbs } from "../ClassBlurbs"
 import "../Styles/BlurbBox.css"
+import { CharacterStructure } from "../types"
 
 type Props = {
     currentClass: string
+    character: CharacterStructure | undefined
 }
 
-const BlurbBox:FC<Props> = ({ currentClass }) => {
+const BlurbBox:FC<Props> = ({ currentClass, character }) => {
 
    const theBlurb = blurbs.reduce((acc, blurb) => {
         if (blurb[0] === currentClass) {
@@ -15,7 +17,15 @@ const BlurbBox:FC<Props> = ({ currentClass }) => {
         return acc
    }, [] as Array<string>)
 
-    return (
+    return (                                                    // Have Randomize button reset "character" to undefined
+        (character) ? <div className="blurb-box">               
+                            <h1>{character.name}</h1>
+                            <p>Class: {character.classs}</p>
+                            <p>Race: {character.race}</p>
+                            <p>HP: {character.hp}</p>
+                            <p>AC: {character.ac}</p>
+                            <p>{character.about}</p>
+                        </div> :
         <div className="blurb-box">
             {(currentClass) ? <h1>The {currentClass}</h1>: 
             <div>
