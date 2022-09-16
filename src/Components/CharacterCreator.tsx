@@ -17,12 +17,12 @@ const CharacterCreator: FC<Props> = (props: Props) => {
     const [raceValue, setRaceValue] = useState<string | undefined>(undefined)
     const [randomizing, setRandomizing] = useState<boolean>(false)
 
-    const clearInputs = (event: any) => {
+    const clearInputs = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         event.preventDefault()
         setFormData({name: '', race: '', classs: '', hp: '', ac: '', str: '', con: '', dex: '', wis: '', int: '', cha: '', about: ''})
     }
 
-    const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
         event.preventDefault()
         setFormData({ ...formData, [event.target.id]: event.target.value })
     }
@@ -44,9 +44,9 @@ const CharacterCreator: FC<Props> = (props: Props) => {
     setFormData({name: randoData(names),race: randoData(races), classs: randoData(classes), hp: randoNumbers(20, 100).toString(), ac: randoNumbers(10, 20).toString(), str: randoNumbers(8, 20).toString(), con: randoNumbers(8, 20).toString(), dex: randoNumbers(8, 20).toString(), wis: randoNumbers(8, 20).toString(), int: randoNumbers(8, 20).toString(), cha: randoNumbers(8, 20).toString(), about: ''})
     }
 
-    const classValueHandler = (event: any) => {
+    const classValueHandler = (event: React.ChangeEvent<HTMLSelectElement>) => {
         props.setClass(event.target.value)
-        handleChange(event)
+        handleChange((event as unknown) as React.ChangeEvent<HTMLInputElement>)
     }
     
     useEffect(() => {
@@ -65,7 +65,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
             <h3>Character Creator</h3>
             <form onSubmit={event => props.submitForm(event, formData)}>
             Name: <input type="text" id="name" onChange={event => handleChange(event)} value={formData.name} required/>
-            Race: <select required id="race" value={raceValue} onChange={(event: any) => handleChange(event)} onClick={() => setRandomizing(false)} >
+            Race: <select required id="race" value={raceValue} onChange={(event) => handleChange(event)} onClick={() => setRandomizing(false)} >
                         <option>Choose your race...</option>
                         <option value="Dragonborn">Dragonborn</option>
                         <option value="Dwarf">Dwarf</option>
@@ -77,7 +77,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
                         <option value="Human">Human</option>
                         <option value="Tiefling">Tiefling</option>
                     </select>
-            Class: <select required id="classs" value={classsValue} onChange={(event: any) => classValueHandler(event)} onClick={() => setRandomizing(false)} >
+            Class: <select required id="classs" value={classsValue} onChange={(event) => classValueHandler(event)} onClick={() => setRandomizing(false)} >
                         <option>Choose your class...</option>
                         <option value="Barbarian">Barbarian</option>
                         <option value="Bard">Bard</option>
@@ -103,9 +103,9 @@ const CharacterCreator: FC<Props> = (props: Props) => {
                     <div>CHA <input className="ability-score" type="text" id="cha" onChange={event => handleChange(event)} value={formData.cha} required/></div>
                 </div>
                     About Me: 
-                    <div><textarea className="about-me" id="about" onChange={(event: any) => handleChange(event)}/></div>
+                    <div><textarea className="about-me" id="about" onChange={(event) => handleChange(event)}/></div>
                     <button id="submit" type="submit">SUBMIT</button>
-                    <button id="clear" onClick={(event: any) => clearInputs(event)}>Clear</button>
+                    <button id="clear" onClick={(event) => clearInputs(event)}>Clear</button>
             </form>
             <button id="randoButton" onClick={(event) => randomize(event)}>Random</button>
         </div>
