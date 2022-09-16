@@ -1,8 +1,11 @@
 /// <reference types="cypress" />
 
+
 describe('Dungeons and Documents!!! Kill all those classs\'', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000/')
+        //can remove viewport settings, added very large screen for button access.
+        cy.viewport(2000, 2000)
     })
   
     it('displays the main page with a consistent phrasing' , () => {
@@ -58,9 +61,9 @@ describe('Dungeons and Documents!!! Kill all those classs\'', () => {
         //looking into.
     })
 
-    it.skip('should not submit a blank form', () => {
+    it('should not submit a blank form', () => {
         cy.get('button[type=submit]').click()
-            .get('.party-member').should('contain', '')
+            .get('.party-wrapper').should('have.value', '')
     })
 
     it.skip('should not accept non-numbers in statistic fields', () => {
