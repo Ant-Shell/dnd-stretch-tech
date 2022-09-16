@@ -7,29 +7,29 @@ export type AppStateStructure = {
         name: string
         race: string
         classs: string
-        hp: number
-        ac: number
-        str: number
-        con: number
-        dex: number
-        wis: number
-        int: number
-        cha: number
+        hp: string
+        ac: string
+        str: string
+        con: string
+        dex: string
+        wis: string
+        int: string
+        cha: string
         about: string
     }
 
 export type PartyStructure = {
-        name: string, 
-        race: string, 
-        classs: string, 
-        hp: number, 
-        ac: number, 
-        str: number, 
-        con: number, 
-        dex: number, 
-        wis: number, 
-        int: number, 
-        cha: number, 
+        name: string,
+        race: string,
+        classs: string,
+        hp: string,
+        ac: string,
+        str: string,
+        con: string,
+        dex: string,
+        wis: string,
+        int: string,
+        cha: string,
         about: string
         }[]
 
@@ -37,14 +37,14 @@ export type CharacterStructure = {
     name: string, 
     race: string, 
     classs: string, 
-    hp: number, 
-    ac: number, 
-    str: number, 
-    con: number, 
-    dex: number, 
-    wis: number, 
-    int: number, 
-    cha: number, 
+    hp: string,
+    ac: string,
+    str: string,
+    con: string,
+    dex: string,
+    wis: string,
+    int: string,
+    cha: string,
     about: string
 }
 
