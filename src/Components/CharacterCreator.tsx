@@ -4,7 +4,7 @@ import { names, races, classes }from "../randomizerData"
 import { CharacterStructure } from "../types"
 
 type Props = {
-    submitForm: (event: React.FormEvent<HTMLFormElement>, character: CharacterStructure) => void
+    submitForm: (event: React.FormEvent<HTMLFormElement>, character: CharacterStructure) => void | string
     setClass: (newState: string) => void
     setCharacter: (param: CharacterStructure | undefined) => void
 }

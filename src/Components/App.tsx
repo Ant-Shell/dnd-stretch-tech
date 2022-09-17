@@ -15,7 +15,19 @@ const App: FC = () => {
 
     const submitForm = (event: React.FormEvent<HTMLFormElement>, character: CharacterStructure) => {
         event.preventDefault()
-        setParty([...party, character])
+        // console.log('Char name', character.name)
+        // console.log(party[0].name)
+        const dupCheck = party.find(member => member.name === character.name)
+        // console.log(dupCheck?.name)
+        // {dupCheck?.name === undefined ? setParty([...party, character]) : console.log("Test")}
+        if (dupCheck?.name === undefined) {
+          setParty([...party, character])
+        } else {
+          return (
+            <p>`${character.name}` is in use, please select another.</p>
+          )
+        }
+        // setParty([...party, character])
     }
 
     const deleteMember = (memberToDelete: string): void => {
