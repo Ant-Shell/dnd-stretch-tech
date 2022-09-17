@@ -1,12 +1,14 @@
 import {FC} from "react"
+import { Link } from "react-router-dom"
+import '../Styles/Error.css'
 //create css file
 
 const Error:FC = () => {
     return (
-        <div>
+        <section className="error-section">
             <h1>Oh no! You seem to have taken a wrong turn along your quest. Please return home!</h1>
-            <img src="src/Styles/roll20"></img>
-        </div>
+            <Link to={`/`}><button className="return-home-button">🕯  Portal to your Fortress  🕯</button></Link>
+        </section>
     )
 }
 
