@@ -30,7 +30,7 @@ const Party: FC<Props> = (props) => {
     return (
         <div className="party-block">
             <div className="party-wrapper">
-                {partyList}
+                {partyList.length ? partyList : <h2 className="add-char-prompt">Hey you, stack some apples for me.  Add players to your party so we can begin!</h2>}
             </div>
             <button id="killAll" onClick={() => props.killemAll()}>Kill'em All</button>
         </div>
