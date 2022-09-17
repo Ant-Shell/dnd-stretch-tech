@@ -33,6 +33,7 @@ const App: FC = () => {
     }
 
     const killemAll = () => {
+        setHasError(false)
         setParty([])
     }
 
