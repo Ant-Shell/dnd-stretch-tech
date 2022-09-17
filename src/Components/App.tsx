@@ -2,6 +2,7 @@ import {FC, useState, useEffect} from 'react';
 import '../Styles/App.css';
 import Nav from './Nav'
 import CharacterSection from "./CharacterSection"
+import Error from "./Error"
 import MonsterSection from "./MonsterSection"
 import { AppStateStructure } from "../types"
 import { fetchMonsters } from "../apiCalls"
@@ -52,6 +53,7 @@ const App: FC = () => {
       <Nav />
       <Route exact path="/" render={() => <CharacterSection party={party} submitForm={submitForm} deleteMember={deleteMember} killemAll={killemAll}/>}/>
       <Route exact path="/monsters" render={() => <MonsterSection monsters={monsters}/>}/>
+      <Route path="*" render={()=> <Error/>}/>
     </main>
     )
   }
