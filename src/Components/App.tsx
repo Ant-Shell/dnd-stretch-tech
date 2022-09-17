@@ -6,7 +6,7 @@ import Error from "./Error"
 import MonsterSection from "./MonsterSection"
 import { AppStateStructure } from "../types"
 import { fetchMonsters } from "../apiCalls"
-import { Route } from "react-router-dom"
+import { Route, Switch} from "react-router-dom"
 import { PartyStructure, CharacterStructure } from "../types"
 
 const App: FC = () => {
@@ -47,9 +47,11 @@ const App: FC = () => {
   return (
     <main>
       <Nav />
-      <Route exact path="/" render={() => <CharacterSection party={party} submitForm={submitForm} deleteMember={deleteMember} killemAll={killemAll} hasError={hasError}/>}/>
-      <Route exact path="/monsters" render={() => <MonsterSection monsters={monsters}/>}/>
-      <Route path="*" render={()=> <Error/>}/>
+      <Switch>
+        <Route exact path="/" render={() => <CharacterSection party={party} submitForm={submitForm} deleteMember={deleteMember} killemAll={killemAll} hasError={hasError}/>}/>
+        <Route exact path="/monsters" render={() => <MonsterSection monsters={monsters}/>}/>
+        <Route path="*" render={()=> <Error/>}/>
+      </Switch>
     </main>
     )
   }
