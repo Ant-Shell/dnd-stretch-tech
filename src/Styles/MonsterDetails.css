@@ -18,19 +18,27 @@
 }
 
 .current-monster {
-    margin-left: 600px;
+font-size: 4vh;
 }
-
 .monster-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     border-style: solid;
     width: 70vw;
     height: 80vh;
+    overflow: scroll;
+    border: 1px solid black;
+    border-radius: 8px;
 }
 
 .stat-ability-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
+    flex: 1, 1;
+    font-size: 1vh;
 }
 
 .monster-stats {
@@ -40,6 +48,7 @@
     border-style: solid;
     width: 400px;
     height: 70vh;
+    padding: 10px;
     margin: 10px;
 }
 
@@ -47,51 +56,71 @@
     display: flex;
     height: 20px;
     font-size: 25px;
-    margin: 15px;
 }
 
 .stat-title {
-    font-size: 30px;
+    font-size: 3vh;
     margin: 15px;
     margin-top: 0px;
 }
 
 .special-abilities {
     border-style: solid;
+    border-radius: 8px;
     width: 40vw;
     padding: 10px;
     margin: 10px;
     overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    flex: 1, 1, content;
+}
+
+.special-abilities h2{
+    font-size: 3vh;
+    align-self: center;
+
 }
 
 .special-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
     overflow: auto;
-    height: 62vh;
+    height: auto;
 }
 
 .special {
     display: flex;
+    flex: 2, 1, content;
     flex-direction: column;
+    justify-content: first baseline;
     align-items: center;
     font-size: 125%;
-    border-style: solid;
-    margin: 5px;
-    width: 300px;
-    height: 300px;
-    overflow: auto;
+    margin: 2vw;
+    width: 15vw;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px;
 }
 
 .special-ability-name {
-    margin-top: 10px;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 2rem;
     
 }
 
 .special-description {
+    font-display: flex;
     margin-top: 0px;
     padding: 5px;
+    flex-wrap: wrap;
+    flex: 1, 1;
 }
 
 .proficiencies {
@@ -99,5 +128,6 @@
     width: 400px;
     height: 310px;
     font-size: 25px;
+    padding: 5px;
     overflow: auto;
 }
