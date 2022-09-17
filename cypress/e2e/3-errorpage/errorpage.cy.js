@@ -13,4 +13,11 @@ describe('Error page test', () => {
         cy.get('button[class=return-home-button]').click()
         cy.url().should('include', '/')
     })
+
+    it('Should not route to Error page if bad URL/Fetch occurs', () => {
+        cy.intercept('GET', 'https://www.dnd5eapi.co/api/monsters', {
+          statusCode: 401
+        })
+        .get('h1').should('contain', 'Oh no! You seem to have taken a wrong turn along your quest. Please return home!')
+      })
 })
