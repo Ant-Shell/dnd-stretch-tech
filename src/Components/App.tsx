@@ -13,22 +13,17 @@ const App: FC = () => {
 
   const [monsters, setMonsters] = useState<AppStateStructure>([])
   const [party, setParty] = useState<PartyStructure>([])
+  const [hasError, setHasError] = useState<boolean>(false)
 
     const submitForm = (event: React.FormEvent<HTMLFormElement>, character: CharacterStructure) => {
         event.preventDefault()
-        // console.log('Char name', character.name)
-        // console.log(party[0].name)
-        const dupCheck = party.find(member => member.name === character.name)
-        // console.log(dupCheck?.name)
-        // {dupCheck?.name === undefined ? setParty([...party, character]) : console.log("Test")}
-        if (dupCheck?.name === undefined) {
+        const duplicateCheck = party.find(member => member.name === character.name)
+        if (duplicateCheck?.name === undefined) {
+          setHasError(false)
           setParty([...party, character])
         } else {
-          return (
-            <p>`${character.name}` is in use, please select another.</p>
-          )
+          setHasError(true)
         }
-        // setParty([...party, character])
     }
 
     const deleteMember = (memberToDelete: string): void => {
@@ -51,7 +46,7 @@ const App: FC = () => {
   return (
     <main>
       <Nav />
-      <Route exact path="/" render={() => <CharacterSection party={party} submitForm={submitForm} deleteMember={deleteMember} killemAll={killemAll}/>}/>
+      <Route exact path="/" render={() => <CharacterSection party={party} submitForm={submitForm} deleteMember={deleteMember} killemAll={killemAll} hasError={hasError}/>}/>
       <Route exact path="/monsters" render={() => <MonsterSection monsters={monsters}/>}/>
       <Route path="*" render={()=> <Error/>}/>
     </main>
