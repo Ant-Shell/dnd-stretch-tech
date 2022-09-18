@@ -63,7 +63,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
         }
     }, [randomizing, props, formData.classs, formData.race])
 
-    const nameTakenMessage = props.hasError === true && <span className="error-message">Duplicate name, try again.</span>;
+    const nameTakenMessage = props.hasError === true && <span className="name-error-message">Duplicate name, try again.</span>;
     
     return (
         <div className="character-creator">

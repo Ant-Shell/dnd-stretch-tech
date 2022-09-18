@@ -9,7 +9,7 @@ type Props = {
 const MonstersList:FC<Props> = (props) => {
 
     const monsterList = props.monsters.map(monster => {
-        return <p onClick={(event) => props.monsterHandler(event)}  id={monster.name} className="single-monster">{monster.name}</p>
+        return <p onClick={(event) => props.monsterHandler(event)}  id={monster.name} className="single-monster" key={monster.name}>{monster.name}</p>
     })
 
     return (

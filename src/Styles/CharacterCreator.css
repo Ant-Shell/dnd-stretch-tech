@@ -25,7 +25,9 @@
     border: 1px solid grey;
 }
 
-
+.name-error-message {
+    color: #D0342C;
+}
 
 form {
     display: flex;
@@ -35,7 +37,7 @@ form {
     justify-content: space-evenly;
 }
 
-#name{
+#name {
     border-radius: 8px;
     border: 1px solid grey;
     padding-top: 10px;
@@ -55,18 +57,18 @@ form {
 }
 
 #ac, #hp {
- 
     border-radius: 8px;
     border: 1px solid grey;
     width: 3vw;
     height: 3vh;
 }
 
-h3{
+h3 {
     font-weight: bold;
     font-size: 24px;
 }
-select{
+
+select {
     background-color: white;
     padding: 16px;
     border: 1px solid grey;
@@ -98,9 +100,11 @@ button:hover {
     box-shadow: 0 0 4px #000;
    
 }
+
 #randoButton {
     margin: 1vh;
 }
+
 #submit {
     background-color: salmon;
 }

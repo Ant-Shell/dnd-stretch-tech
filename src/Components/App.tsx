@@ -18,11 +18,11 @@ const App: FC = () => {
     const submitForm = (event: React.FormEvent<HTMLFormElement>, character: CharacterStructure) => {
         event.preventDefault()
         const duplicateCheck = party.find(member => member.name === character.name)
-        if (duplicateCheck?.name === undefined) {
+        if (duplicateCheck?.name !== undefined) {
+          setHasError(true)
+        } else {
           setHasError(false)
           setParty([...party, character])
-        } else {
-          setHasError(true)
         }
     }
 
