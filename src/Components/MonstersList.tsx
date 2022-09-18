@@ -13,8 +13,11 @@ const MonstersList:FC<Props> = (props) => {
     })
 
     return (
-        <div className="monsters-list">
+        <div className="monsters">
+            <h2>Monster List</h2>
+            <div className="monsters-list">
             {monsterList}
+            </div>
         </div>
     )
 }
