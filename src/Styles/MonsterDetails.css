@@ -1,23 +1,22 @@
 .monster-details {
-display: flex;
-align-items: flex-start;
-justify-content: center;
-flex-wrap: wrap;
-border-style: solid;
-width: 100vw;
-height: 95vh;
-flex: 2, 1;
-overflow: scroll;
-
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-style: solid;
+    width: 100vw;
+    height: 95vh;
+    flex: 2, 1;
+    overflow: scroll;
 }
 
 .head {
-height: 1vh;
-display: flex;
-flex-direction: row;
-width: 100vw;
-justify-content: space-around;
-margin-right: 25vw;
+    height: 1vh;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-around;
+    margin-right: 25vw;
 }
 
 .title {
@@ -25,22 +24,27 @@ margin-right: 25vw;
     width: 35vw;
 }
 
-
 .search-bar {
-border-radius: 10px;
-height: 2vh;
-width: 12vw;
+    border-radius: 10px;
+    height: 2vh;
+    width: 12vw;
 }
 
 .search-bar-container {
-width: 20vw;
-align-self: flex-start;
-align-content:flex-start;
-margin-left: 10vw;
-margin-top: 2vh;
+    width: 20vw;
+    align-self: flex-start;
+    align-content:flex-start;
+    margin-left: 10vw;
+    margin-top: 2vh;
 }
+
 .monster-search-button {
-width: 6vw;
+    width: 6vw;
+}
+
+.search-error-message {
+    margin-right: 6vw;
+    color: #D0342C
 }
 
 .stat-ability-wrapper {
@@ -82,6 +86,7 @@ width: 6vw;
     margin-top: 0px;
     align-self: center;
 }
+
 .container {
     height: 75vh;
     width: 45vw;
@@ -107,10 +112,9 @@ width: 6vw;
     box-shadow: 0 0 4px #000;
 }
 
-.special-abilities h2{
+.special-abilities h2 {
     font-size: 3vh;
     align-self: center;
-   
 }
 
 .special-wrapper {
@@ -155,28 +159,27 @@ width: 6vw;
 }
 
 .proficiency-wrapper {
-padding: 10px;
-font-size: 2vh;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: flex-start;
-height: 10vh;
-
+    padding: 10px;
+    font-size: 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 10vh;
 }
 
 .proficiencies {
-margin: 10px;
-padding: 10px;
-border: solid;
-border-radius: 8px;
-width: 45vw;
-align-content: flex-start;
-height: auto;
-box-shadow: 0 0 4px #000;
+    margin: 10px;
+    padding: 10px;
+    border: solid;
+    border-radius: 8px;
+    width: 45vw;
+    align-content: flex-start;
+    height: auto;
+    box-shadow: 0 0 4px #000;
 }
 
 .proficiencies h3 {
-font-size: 3vh;
+    font-size: 3vh;
 }
 
