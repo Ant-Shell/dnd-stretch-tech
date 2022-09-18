@@ -15,6 +15,10 @@
     border: 1px solid grey;
 }
 
+.party-member:hover {
+    cursor: pointer;
+  }
+
 .party-wrapper {
     width: 26vw;
     height: 75vh;
