@@ -23,20 +23,23 @@ const MonsterDetails:FC<Props> = ({currentMonster, monsterSearchHandler}) => {
     return (
         (currentMonster) &&
         <div className="monster-details">
-                <div className="search-bar-container">
-                    <input
-                        type="text"
-                        placeholder="Search for Monster"
-                        className="search-bar"
-                        value={searchInput}
-                        id="search"
-                        onChange={(event) => setsearchInput(event.target.value)}>
-                    </input>
-                    <button className="monster-search-button" onClick={() => monsterSearchHandler(searchInput)}>SUBMIT</button>
-                </div>
-            <div className="header">
+            <div>
+            <header className="head">
+            <span className="search-bar-container">
+                <input
+                    type="text"
+                    placeholder="Search for Monster"
+                    className="search-bar"
+                    value={searchInput}
+                    id="search"
+                    onChange={(event) => setsearchInput(event.target.value)}>
+                </input>
+                <button className="monster-search-button" onClick={() => monsterSearchHandler(searchInput)}>SUBMIT</button>  
+            </span>
+            <span className="title">
                 <h1 className="current-monster">{currentMonster.name}</h1>
-                
+            </span>
+            </header>
                 </div>
             <div className="stat-ability-wrapper">
                 <div className="monster-stats">
@@ -51,7 +54,9 @@ const MonsterDetails:FC<Props> = ({currentMonster, monsterSearchHandler}) => {
                     <p className="monster-stat">HP: {currentMonster.hit_points}</p>
                     
                 </div>
+                    
                 <div className = "container">
+                       
                 <div className="special-abilities">
                     <h2>Special Abilities</h2>
                     <div className="special-wrapper">
