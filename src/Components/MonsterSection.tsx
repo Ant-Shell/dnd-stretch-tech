@@ -10,6 +10,8 @@ type Props = {
 
 const MonsterSection:FC<Props> = (props) => {
 
+    const [monsterNotFound, setMonsterNotFound] = useState<boolean>(false)
+
     const [currentMonster, setCurrentMonster] = useState<MonsterStructure>({
         name: 'Aboleth', 
         url: '/api/monsters/aboleth',
@@ -35,17 +37,22 @@ const MonsterSection:FC<Props> = (props) => {
 
     const monsterSearchHandler = (monsterName:string) => {
         const theMonster = props.monsters.find(monster => monster.name.toUpperCase() === monsterName.toUpperCase())
-        fetch(`https://www.dnd5eapi.co${theMonster?.url}`)
-        .then(response => response.json())
-        .then(data => {
-            setCurrentMonster(data)
-        })
+        if (theMonster === undefined) {
+            setMonsterNotFound(true)
+        } else {
+            fetch(`https://www.dnd5eapi.co${theMonster?.url}`)
+            .then(response => response.json())
+            .then(data => {
+                setCurrentMonster(data)
+            setMonsterNotFound(false)
+            })
+        }
     }    
 
     return (
         <div className="monster-section">
             <MonstersList monsters={props.monsters} monsterHandler={monsterHandler}/>
-            <MonsterDetails currentMonster={currentMonster} monsterSearchHandler={monsterSearchHandler}/>
+            <MonsterDetails currentMonster={currentMonster} monsterSearchHandler={monsterSearchHandler} monsterNotFound={monsterNotFound}/>
         </div>
     )
 }
