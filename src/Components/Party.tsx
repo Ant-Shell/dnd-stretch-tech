@@ -26,7 +26,7 @@ const Party: FC<Props> = (props) => {
             </div>
         )
     })
-
+ 
     return (
         <div className="party-block">
             <div className="party-wrapper">

@@ -13,10 +13,17 @@ const App: FC = () => {
 
   const [monsters, setMonsters] = useState<AppStateStructure>([])
   const [party, setParty] = useState<PartyStructure>([])
+  const [hasError, setHasError] = useState<boolean>(false)
 
     const submitForm = (event: React.FormEvent<HTMLFormElement>, character: CharacterStructure) => {
         event.preventDefault()
-        setParty([...party, character])
+        const duplicateCheck = party.find(member => member.name === character.name)
+        if (duplicateCheck?.name === undefined) {
+          setHasError(false)
+          setParty([...party, character])
+        } else {
+          setHasError(true)
+        }
     }
 
     const deleteMember = (memberToDelete: string): void => {
@@ -26,6 +33,7 @@ const App: FC = () => {
     }
 
     const killemAll = () => {
+        setHasError(false)
         setParty([])
     }
 
@@ -39,7 +47,7 @@ const App: FC = () => {
   return (
     <main>
       <Nav />
-      <Route exact path="/" render={() => <CharacterSection party={party} submitForm={submitForm} deleteMember={deleteMember} killemAll={killemAll}/>}/>
+      <Route exact path="/" render={() => <CharacterSection party={party} submitForm={submitForm} deleteMember={deleteMember} killemAll={killemAll} hasError={hasError}/>}/>
       <Route exact path="/monsters" render={() => <MonsterSection monsters={monsters}/>}/>
       <Route path="*" render={()=> <Error/>}/>
     </main>

@@ -10,16 +10,17 @@ type Props = {
     submitForm: (event: React.FormEvent<HTMLFormElement>, character: CharacterStructure) => void
     deleteMember(memberToDelete: string): void
     killemAll: () => void
+    hasError: boolean
 }
 
-const CharacterSection:FC<Props> = ({ party, submitForm, deleteMember, killemAll }) => {
+const CharacterSection:FC<Props> = ({ party, submitForm, deleteMember, killemAll, hasError }) => {
 
     const [currentClass, setClass] = useState<string>('')
     const [character, setCharacter] = useState<CharacterStructure | undefined>(undefined)
 
     return (
         <div className="main-section">
-            <CharacterCreator submitForm={submitForm} setClass={setClass} setCharacter={setCharacter}/>
+            <CharacterCreator submitForm={submitForm} setClass={setClass} setCharacter={setCharacter} hasError={hasError}/>
             <BlurbBox currentClass={currentClass} character={character}/>
             <Party party={party} deleteMember={deleteMember} killemAll={killemAll} setCharacter={setCharacter}/>
         </div>
