@@ -5,9 +5,10 @@ import { MonsterStructure } from "../types"
 type Props = {
     currentMonster: MonsterStructure
     monsterSearchHandler: (monsterName:string) => void
+    monsterNotFound: boolean
 }
 
-const MonsterDetails:FC<Props> = ({currentMonster, monsterSearchHandler}) => {
+const MonsterDetails:FC<Props> = ({currentMonster, monsterSearchHandler, monsterNotFound}) => {
 
     const [searchInput, setsearchInput] = useState<string>("")
 
@@ -17,8 +18,10 @@ const MonsterDetails:FC<Props> = ({currentMonster, monsterSearchHandler}) => {
 
     const specialAbilities = currentMonster.special_abilities.map((spec) => {
         
-        return <div className="special"><h3 className="special-ability-name">{spec.name}</h3> <p className="special-description">{spec.desc}</p></div>
+        return <div className="special" key={spec.desc}><h3 className="special-ability-name">{spec.name}</h3> <p className="special-description">{spec.desc}</p></div>
     })
+
+    const monsterNotFoundMesage = monsterNotFound === true && <span className="search-error-message">Monster not found.</span>
 
     return (
         (currentMonster) &&
@@ -34,7 +37,8 @@ const MonsterDetails:FC<Props> = ({currentMonster, monsterSearchHandler}) => {
                     id="search"
                     onChange={(event) => setsearchInput(event.target.value)}>
                 </input>
-                <button className="monster-search-button" onClick={() => monsterSearchHandler(searchInput)}>SUBMIT</button>  
+                <button className="monster-search-button" onClick={() => monsterSearchHandler(searchInput)}>SUBMIT</button>
+                { monsterNotFoundMesage } 
             </span>
             <span className="title">
                 <h1 className="current-monster">{currentMonster.name}</h1>
