@@ -1,40 +1,82 @@
 export const names: string[] = [
-
-'Khali the Burning Land',
-
-'Algween the Flying Dutchman',
-
-'Oughtianys the Soldier',
-
-'Brahil the Chief',
-
-'Ilene the Pacific',
-
-'Pilo the Greyfell',
-
-'Firedorn the Accursed',
-
-'Graywand the Builder',
-
-'Marce the Mediocre',
-
-'Bolto the Kingly', 
-
-'Drard the She-Wolf of France'
-
+'Khali',
+'Algween',
+'Oughtianys',
+'Brahil',
+'Ilene',
+'Pilo',
+'Firedorn',
+'Graywand',
+'Marce',
+'Bolto', 
+'Drard',
+'Inadmos',
+'Itoughser',
+'Elyon',
+'Lurer',
+'Aribeth',
+'Aldradim',
+'Doright',
+'Ia\'an',
+'Cyrthia',
+'Mila',
+'Balthus',
+'Craig',
+'Dorthea',
+'Frowsette',
+'Darsul',
+'Ancha',
+'Kalfed',
+'Aldwin',
+'Jespar',
+'Yuntsley',
+'Quillan',
+'Doots',
+'Blanchard',
+'Fern',
+'Burny',
+'Idest',
 
 ]
 
+export const adjectives: string[] = [
+`Burning Land`, 
+`Flying Dutchman`, 
+`Soldier`, 
+`Chief`, 
+`Pacific`, 
+`Greyfell`, 
+`Accursed`, 
+`Builder`, 
+`Mediocre`,
+`Kingly`,
+`She-Wolf`,
+`Brave`,
+'Hammer',
+'Iron',
+'Rash',
+'Wise',
+'Dutchess',
+'Peacemaker',
+'Prince',
+'Beauty',
+'Lion of the North',
+'Adventurous',
+'Saintly',
+'Spider',
+'Cranky'
+]
+
 export const races: string[] = [
-    'Dwarf',
-    'Elf',
-    'Halfling',
-    'Human',
-    'Dragonborn',
-    'Gnome',
-    'Half-Elf',
-    'Half-Orc',
-    'Tiefling' 
+'Dwarf',
+'Elf',
+'Halfling',
+'Human',
+'Dragonborn',
+'Gnome',
+'Half-Elf',
+'Half-Orc',
+'Tiefling' 
 ]
 
 export const classes: string[] = [
