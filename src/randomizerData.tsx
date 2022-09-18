@@ -97,7 +97,7 @@ export const classes: string[] = [
 export const backstories: string[] = [
 `You fought in a battle. You survived the battle, but you suffer from terrible nightmares in which you relive the experience.`,
 `You were accused of Theft. You were caught and convicted. You spent time in jail, chained to an oar, or performing hard labor. You served a sentence of 4 years or succeeded in escaping after that much time.`,
-`You gained a bit of good fortune. You found a riding horse. You gained a bit of good fortune. You found a treasure map. You suffered a tragedy. A family member or a close friend died.`,
+`You gained a bit of good fortune. You found a riding horse. You found a treasure map. You suffered a tragedy. A family member or a close friend died.`,
 `You fell in with a gang of reprobates and ne'er-do wells, and learned your specialty from them.`, `You went on an adventure. You nearly died.`, `You went on an adventure. You suffered a grievous injury. Although the wound healed, it still pains you from time to time.`,
 `While wandering around in a forbidden place, you encountered an otherworldly being that offered to enter into a pact with you.`,
 `You always had a way with animals, able to calm them with a soothing word and a touch.`,

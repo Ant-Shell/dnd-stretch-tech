@@ -1,6 +1,6 @@
 import React, {FC, useState, ChangeEvent, useEffect} from "react"
 import "../Styles/CharacterCreator.css"
-import { names, adjectives, races, classes }from "../randomizerData"
+import { names, adjectives, races, classes, backstories }from "../randomizerData"
 import { CharacterStructure } from "../types"
 
 type Props = {
@@ -43,7 +43,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
     event.preventDefault()
     props.setCharacter(undefined)
     setRandomizing(true)
-    setFormData({name: randoData(names) + ' the ' + randoData(adjectives), race: randoData(races), classs: randoData(classes), hp: randoNumbers(20, 100).toString(), ac: randoNumbers(10, 20).toString(), str: randoNumbers(8, 20).toString(), con: randoNumbers(8, 20).toString(), dex: randoNumbers(8, 20).toString(), wis: randoNumbers(8, 20).toString(), int: randoNumbers(8, 20).toString(), cha: randoNumbers(8, 20).toString(), about: ''})
+    setFormData({name: randoData(names) + ' the ' + randoData(adjectives), race: randoData(races), classs: randoData(classes), hp: randoNumbers(20, 100).toString(), ac: randoNumbers(10, 20).toString(), str: randoNumbers(8, 20).toString(), con: randoNumbers(8, 20).toString(), dex: randoNumbers(8, 20).toString(), wis: randoNumbers(8, 20).toString(), int: randoNumbers(8, 20).toString(), cha: randoNumbers(8, 20).toString(), about: randoData(backstories)})
     }
 
     const classValueHandler = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -105,7 +105,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
                     <div>CHA <input className="ability-score" type="text" id="cha" onChange={event => handleChange(event)} value={formData.cha} required/></div>
                 </div>
                     About Me: 
-                    <div><textarea className="about-me" id="about" onChange={(event) => handleChange(event)}/></div>
+                    <div><textarea className="about-me" id="about" onChange={(event) => handleChange(event)} value={formData.about}/></div>
                     <button id="submit" type="submit">SUBMIT</button>
                     <button id="clear" onClick={(event) => clearInputs(event)}>Clear</button>
             </form>
