@@ -4,14 +4,22 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    border-bottom: solid black;
     width: 100vw;
     height: 9vh;
     font-size: 5vh;
-    font-weight: 300;
+    font-weight: bolder;
     box-shadow: 0 0 4px #000;
+    border-bottom: 1px solid black;
     padding-bottom: 3vh;
     padding-top: 2vh;
+}
+
+.app-title {
+  width: fit-content;
+  background-color: white;
+  align-self: center;
+  margin-top: 1vh;
+  border-radius: 8px;
 }
 
 

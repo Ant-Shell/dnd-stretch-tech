@@ -1,13 +1,12 @@
 .monster-details {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
-    border-style: solid;
-    width: 100vw;
-    height: 95vh;
-    flex: 2, 1;
-    overflow: scroll;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 95vh;
+  flex: 2, 1;
+  overflow: scroll;
 }
 
 .head {
@@ -22,6 +21,14 @@
 .title {
     font-size: 3vh;
     width: 35vw;
+    padding: 10px;
+    
+}
+
+.current-monster {
+background-color: white;
+border-radius: 8px;
+opacity: 1;
 }
 
 .search-bar {
@@ -63,7 +70,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: stretch;
-    border-style: solid;
+    border: 1px solid black;
     border-radius: 8px;
     width: 24vw;
     height: 60vh;
@@ -71,6 +78,7 @@
     margin-top: 1vh;
     box-shadow: 0 0 4px #000;
     overflow-y: scroll;
+    background-color: white;
 }
 
 .monster-stat {
@@ -102,14 +110,15 @@
 }
 .special-abilities {
     align-self: flex-start;
-    border-style: solid;
+    border: 1px solid black;
     border-radius: 8px;
     width: 45vw;
-    height: 35vh;
+    height: 45vh;
     overflow: auto;
     padding: 10px;
     margin: 10px;
     box-shadow: 0 0 4px #000;
+    background-color: white;
 }
 
 .special-abilities h2 {
@@ -137,7 +146,7 @@
     font-size: 125%;
     margin: 1vw;
     width: 18vw;
-    height: auto;
+    height: 20vh;
     border: 1px solid black;
     border-radius: 8px;
     padding: 10px;
@@ -159,24 +168,26 @@
 }
 
 .proficiency-wrapper {
-    padding: 10px;
-    font-size: 2vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    height: 10vh;
+  padding: 10px;
+  font-size: 2vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: auto;
+
 }
 
 .proficiencies {
-    margin: 10px;
-    padding: 10px;
-    border: solid;
-    border-radius: 8px;
-    width: 45vw;
-    align-content: flex-start;
-    height: auto;
-    box-shadow: 0 0 4px #000;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 45vw;
+  align-content: flex-start;
+  height: 20vh;
+  box-shadow: 0 0 4px #000;
+  background-color: white;
 }
 
 .proficiencies h3 {
