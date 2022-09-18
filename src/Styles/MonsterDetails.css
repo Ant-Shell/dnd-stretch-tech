@@ -1,103 +1,182 @@
-.search-bar-container {
-    display: flex;
-    justify-content: center;
-    
+.monster-details {
+display: flex;
+align-items: flex-start;
+justify-content: center;
+flex-wrap: wrap;
+border-style: solid;
+width: 100vw;
+height: 95vh;
+flex: 2, 1;
+overflow: scroll;
+
 }
+
+.head {
+height: 1vh;
+display: flex;
+flex-direction: row;
+width: 100vw;
+justify-content: space-around;
+margin-right: 25vw;
+}
+
+.title {
+    font-size: 3vh;
+    width: 35vw;
+}
+
 
 .search-bar {
-    margin-left: 300px;
-    border-radius: 10px;
-    height: 20px;
-    width: 180px;
-    margin-top: 30px;
+border-radius: 10px;
+height: 2vh;
+width: 12vw;
 }
 
+.search-bar-container {
+width: 20vw;
+align-self: flex-start;
+align-content:flex-start;
+margin-left: 10vw;
+margin-top: 2vh;
+}
 .monster-search-button {
-    margin-left: 5px;
-    margin-top: 30px;
-}
-
-.current-monster {
-    margin-left: 600px;
-}
-
-.monster-details {
-    border-style: solid;
-    width: 70vw;
-    height: 80vh;
+width: 6vw;
 }
 
 .stat-ability-wrapper {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    align-items: center;
+    flex: 1, 1;
+    font-size: 1.5vh;
+    height: 75vh;
 }
 
 .monster-stats {
     display: flex;
+    flex-wrap: wrap;
+    align-self: flex-start;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: stretch;
     border-style: solid;
-    width: 400px;
-    height: 70vh;
-    margin: 10px;
+    border-radius: 8px;
+    width: 24vw;
+    height: 60vh;
+    padding: 10px;
+    margin-top: 1vh;
+    box-shadow: 0 0 4px #000;
+    overflow-y: scroll;
 }
 
 .monster-stat {
     display: flex;
-    height: 20px;
-    font-size: 25px;
-    margin: 15px;
+    flex-wrap: wrap;
+    flex: 1, 2, content;
+    font-size: 2vh;
+    overflow-wrap: break-word;
 }
 
 .stat-title {
-    font-size: 30px;
-    margin: 15px;
+    font-size: 3vh;
     margin-top: 0px;
+    align-self: center;
 }
-
+.container {
+    height: 75vh;
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content:flex-start;
+    align-items:flex-start;
+    flex: 1, 1, content;
+    padding: 10px;
+    margin: 1vh;
+    margin-left: 4vw;
+}
 .special-abilities {
+    align-self: flex-start;
     border-style: solid;
-    width: 40vw;
+    border-radius: 8px;
+    width: 45vw;
+    height: 35vh;
+    overflow: auto;
     padding: 10px;
     margin: 10px;
-    overflow: auto;
+    box-shadow: 0 0 4px #000;
+}
+
+.special-abilities h2{
+    font-size: 3vh;
+    align-self: center;
+   
 }
 
 .special-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: stretch;
     overflow: auto;
-    height: 62vh;
+    width: 45vw;
+    height: auto;
+    margin-right: 5px;
 }
 
 .special {
     display: flex;
+    flex: 2, 1, content;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     font-size: 125%;
-    border-style: solid;
-    margin: 5px;
-    width: 300px;
-    height: 300px;
-    overflow: auto;
+    margin: 1vw;
+    width: 18vw;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 4px #000;
 }
 
 .special-ability-name {
-    margin-top: 10px;
-    
+    font-weight: bolder;
+    font-size: 2.5vh;
 }
 
 .special-description {
+    font-display: flex;
     margin-top: 0px;
     padding: 5px;
+    flex-wrap: wrap;
+    flex: 1, 1;
+    overflow-y: scroll;
+}
+
+.proficiency-wrapper {
+padding: 10px;
+font-size: 2vh;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-start;
+height: 10vh;
+
 }
 
 .proficiencies {
-    border-top: solid;
-    width: 400px;
-    height: 310px;
-    font-size: 25px;
-    overflow: auto;
+margin: 10px;
+padding: 10px;
+border: solid;
+border-radius: 8px;
+width: 45vw;
+align-content: flex-start;
+height: auto;
+box-shadow: 0 0 4px #000;
 }
+
+.proficiencies h3 {
+font-size: 3vh;
+}
+
