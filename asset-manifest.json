@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dnd-stretch-tech/static/css/main.3bd38d74.css",
+    "main.js": "/dnd-stretch-tech/static/js/main.cb528a97.js",
+    "index.html": "/dnd-stretch-tech/index.html",
+    "main.3bd38d74.css.map": "/dnd-stretch-tech/static/css/main.3bd38d74.css.map",
+    "main.cb528a97.js.map": "/dnd-stretch-tech/static/js/main.cb528a97.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3bd38d74.css",
+    "static/js/main.cb528a97.js"
+  ]
+}
