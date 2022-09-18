@@ -1,11 +1,14 @@
 .monsters {
 display: flex;
 flex-direction: column;
-border-style: solid;
+border-style: 1px solid black;
 width: 15vw;
 height: 100vh;
 overflow: auto;
 align-self: flex-start;
+background-color: white;
+box-shadow: 0 0 4px #000;
+border-radius: 8px;
 }
 
 

@@ -3,11 +3,11 @@ display: flex;
 align-items: flex-start;
 justify-content: center;
 flex-wrap: wrap;
-border-style: solid;
 width: 100vw;
 height: 95vh;
 flex: 2, 1;
 overflow: scroll;
+
 
 }
 
@@ -23,6 +23,14 @@ margin-right: 25vw;
 .title {
     font-size: 3vh;
     width: 35vw;
+    padding: 10px;
+    
+}
+
+.current-monster {
+background-color: white;
+border-radius: 8px;
+opacity: 1;
 }
 
 
@@ -59,7 +67,7 @@ width: 6vw;
     flex-direction: column;
     justify-content: space-around;
     align-items: stretch;
-    border-style: solid;
+    border: 1px solid black;
     border-radius: 8px;
     width: 24vw;
     height: 60vh;
@@ -67,6 +75,7 @@ width: 6vw;
     margin-top: 1vh;
     box-shadow: 0 0 4px #000;
     overflow-y: scroll;
+    background-color: white;
 }
 
 .monster-stat {
@@ -97,14 +106,15 @@ width: 6vw;
 }
 .special-abilities {
     align-self: flex-start;
-    border-style: solid;
+    border: 1px solid black;
     border-radius: 8px;
     width: 45vw;
-    height: 35vh;
+    height: 45vh;
     overflow: auto;
     padding: 10px;
     margin: 10px;
     box-shadow: 0 0 4px #000;
+    background-color: white;
 }
 
 .special-abilities h2{
@@ -133,7 +143,7 @@ width: 6vw;
     font-size: 125%;
     margin: 1vw;
     width: 18vw;
-    height: auto;
+    height: 20vh;
     border: 1px solid black;
     border-radius: 8px;
     padding: 10px;
@@ -161,19 +171,20 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: flex-start;
-height: 10vh;
+height: auto;
 
 }
 
 .proficiencies {
 margin: 10px;
 padding: 10px;
-border: solid;
+border: 1px solid black;
 border-radius: 8px;
 width: 45vw;
 align-content: flex-start;
-height: auto;
+height: 20vh;
 box-shadow: 0 0 4px #000;
+background-color: white;
 }
 
 .proficiencies h3 {

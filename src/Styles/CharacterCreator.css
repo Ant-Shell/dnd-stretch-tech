@@ -3,13 +3,14 @@
     flex-direction: column;
     align-items: center;
     align-content: space-around;
-    border: solid black;
+    border: 1px solid black;
     border-radius: 8px;
     width: 26vw;
     height: 82vh;
     overflow-wrap: break-word;
     overflow-y: scroll;
     box-shadow: 0 0 4px #000;
+    background-color: white;
 }
 
 .ability-score-wrapper {
@@ -90,6 +91,12 @@ button {
     border-radius: 16px;
     font-size: 12px;
     margin-bottom: 1vh;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 4px #000;
+   
 }
 #randoButton {
     margin: 1vh;

@@ -1,10 +1,11 @@
 .blurb-box {
-    border: solid black;
+    border: 1px solid black;
     border-radius: 8px;
     height: 82vh;
     width: 36vw;
     overflow-y: scroll;
     box-shadow: 0 0 4px #000;
+    background-color: white;
 }
 
 .the-blurb {

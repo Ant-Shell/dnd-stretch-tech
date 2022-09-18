@@ -22,7 +22,7 @@ const Nav:FC = () => {
 
     return (
             <nav>
-                <header>Dungeons & Documents</header>
+                <header className="app-title">Dungeons & Documents</header>
                 <div className="button-container">
                     <Link to={`/${url}`}><button className="view-monster-page-button" onClick={() => pageHandler()}>{buttonName}</button></Link>
                 </div>
