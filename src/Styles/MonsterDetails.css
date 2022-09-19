@@ -47,7 +47,8 @@
 }
 
 .monster-search-button {
-    width: 6vw;
+    width: 75px;
+    height: 25px;
 }
 
 .search-error-message {
@@ -203,3 +204,16 @@
     font-size: 3vh;
 }
 
+@media screen and (max-width: 600px) {
+    .monster-search-button {
+      height: 17px;
+      width: 60px;
+    }
+  }
+
+  @media screen and (max-height: 450px) {
+    .monster-search-button {
+        height: 17px;
+        width: 60px;
+    }
+  }
