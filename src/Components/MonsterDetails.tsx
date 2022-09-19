@@ -27,19 +27,20 @@ const MonsterDetails:FC<Props> = ({currentMonster, monsterSearchHandler, monster
         (currentMonster) &&
         <div className="monster-details">
             <div>
+                    <span className="search-bar-container">
+                        <input
+                            type="text"
+                            placeholder="Search for Monster"
+                            className="search-bar"
+                            value={searchInput}
+                            id="search"
+                            onChange={(event) => setsearchInput(event.target.value)}>
+                        </input>
+                        <button className="monster-search-button" onClick={() => monsterSearchHandler(searchInput)}>SUBMIT</button>
+                        {monsterNotFoundMesage}
+                    </span>
             <header className="head">
-            <span className="search-bar-container">
-                <input
-                    type="text"
-                    placeholder="Search for Monster"
-                    className="search-bar"
-                    value={searchInput}
-                    id="search"
-                    onChange={(event) => setsearchInput(event.target.value)}>
-                </input>
-                <button className="monster-search-button" onClick={() => monsterSearchHandler(searchInput)}>SUBMIT</button>
-                { monsterNotFoundMesage } 
-            </span>
+            
             <span className="title">
                 <h1 className="current-monster">{currentMonster.name}</h1>
             </span>
