@@ -26,7 +26,7 @@
 }
 
 .current-monster {
-background-color: white;
+background-color: rgba(255,255,255, 0.5);
 border-radius: 8px;
 opacity: 1;
 }
@@ -51,7 +51,8 @@ opacity: 1;
 
 .search-error-message {
     margin-right: 6vw;
-    color: #D0342C
+    color: #D0342C;
+    background-color: rgba(255,255,255, 0.9);
 }
 
 .stat-ability-wrapper {
