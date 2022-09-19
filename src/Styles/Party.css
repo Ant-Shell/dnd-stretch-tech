@@ -33,8 +33,25 @@
     width: auto;
 }
 
-#killAll {
+.killAll {
+    font-size: small;
+    height: 30px;
+    width: 150px;
     position: relative;
     align-self: center;
     background-color: salmon;
 }
+
+@media screen and (max-width: 600px) {
+    .killAll {
+      height: 20px;
+      width: 70px;
+    }
+  }
+
+  @media screen and (max-height: 760px) {
+    .killAll {
+        height: 20px;
+        width: 90px;
+    }
+  }
