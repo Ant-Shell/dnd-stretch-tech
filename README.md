@@ -5,7 +5,7 @@
   - We chose to make a D&D Random Character Generator.
   - When the user first comes to the app, they will see the Character Creation page.
   - There, the user can fill out the required input fields and submit their new character to the party.
-  - Alternatively, the user can choose to randomize their character or clear all inputs.
+  - Alternatively, the user can choose to randomize their character details or clear all inputs.
   - The user can delete individual characters from the party or choose to delete the whole party.
   - The user can also navigate to the Monster Manual, where they can explore a list of "Monsters" and see the monster's details and statistics.
   
