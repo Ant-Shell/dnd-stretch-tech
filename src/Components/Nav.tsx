@@ -24,7 +24,7 @@ const Nav:FC = () => {
         <nav>
             <header> 
                 <img className="app-title" key="appTitle" src='https://user-images.githubusercontent.com/102932448/190942053-3537afa6-4478-4ae5-bf39-e9af6e7210ff.png' alt="Dungeons & Documents"/>
-                <Link to={`/dungeons&documents/${url}`}><button className="view-monster-page-button" onClick={() => pageHandler()}>{buttonName}</button></Link>
+                <Link to={`/dnd-stretch-tech/${url}`}><button className="view-monster-page-button" onClick={() => pageHandler()}>{buttonName}</button></Link>
             </header>
         </nav>     
     )
