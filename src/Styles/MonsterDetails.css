@@ -54,6 +54,7 @@ box-shadow: 0 0 4px #000;
 .monster-search-button {
     width: 75px;
     height: 25px;
+    background-color: #FD0059;
 }
 
 .search-error-message {
