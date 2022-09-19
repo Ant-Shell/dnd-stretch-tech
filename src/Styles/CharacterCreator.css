@@ -84,8 +84,8 @@ select {
 button {
     padding-top: 4px;
     padding-bottom: 4px;
-    height: 3vh;
-    width: 6vw;
+    height: 30px;
+    width: 150px;
     cursor: pointer;
     border: none;
     color: #fff;
@@ -108,3 +108,22 @@ button:hover {
 #submit {
     background-color: salmon;
 }
+
+@media screen and (max-width: 600px) {
+    div > button,
+    form > button {
+        height: 20px;
+        width: 60px;
+    }
+  }
+
+  @media screen and (max-height: 760px) {
+    div > button,
+    form > button {
+        height: 15px;
+        width: 150px;
+    }
+  }
+
+
+
