@@ -26,9 +26,10 @@
 }
 
 .current-monster {
-background-color: rgba(255,255,255, 0.5);
-border-radius: 8px;
-opacity: 1;
+    background-color: rgba(255,255,255, 0.5);
+    border-radius: 8px;
+    opacity: 1;
+    white-space: nowrap;
 }
 
 .search-bar {
@@ -88,6 +89,7 @@ opacity: 1;
     flex: 1, 2, content;
     font-size: 2vh;
     overflow-wrap: break-word;
+    white-space: nowrap;
 }
 
 .stat-title {
@@ -173,10 +175,15 @@ opacity: 1;
   font-size: 2vh;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   height: auto;
+}
 
+.proficiency {
+    white-space: nowrap;
+    margin-right: 0.3em;
 }
 
 .proficiencies {
@@ -189,6 +196,7 @@ opacity: 1;
   height: 20vh;
   box-shadow: 0 0 4px #000;
   background-color: white;
+  overflow: auto;
 }
 
 .proficiencies h3 {
