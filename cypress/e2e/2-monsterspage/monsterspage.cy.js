@@ -27,7 +27,7 @@ describe('Dungeons and Documents!!! Kill all those classs\'', () => {
 
     it('should tell user that a monster cannot be found', () => {
         cy.get('.search-bar')
-            .type('yo momma')
+            .type('Pikachu')
         cy.get('button[class=monster-search-button]').click()
         cy.contains('span[class=search-error-message]', 'Monster not found')
     })
