@@ -36,20 +36,7 @@ nav {
   border-radius: 16px;
   margin-top: 1vh;
   margin-bottom: 1vh;
-}
-
-@media screen and (max-width: 700px) {
-  .view-monster-page-button {
-    height: 50px;
-    width: 70px;
-  }
-}
-
-@media screen and (max-height: 500px) {
-  .view-monster-page-button {
-      height: 20px;
-      width: 70px;
-  }
+  white-space: nowrap;
 }
 
 .button-container {
@@ -57,3 +44,19 @@ nav {
   margin-left: 2vw;
   margin-top: 3vh;
 }
+
+@media screen and (max-width: 900px) {
+  .view-monster-page-button {
+    height: 25px;
+    width: 110px;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .view-monster-page-button {
+      height: 25px;
+      width: 110px;
+  }
+}
+
+
