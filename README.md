@@ -13,7 +13,9 @@
   - Click [here](https://ant-shell.github.io/dnd-stretch-tech/) to check out our application.
 
 ## Application in Action
-[Building a Party](GIFS/2022-09-19 15.02.44.gif)
+![Building a Party](https://github.com/Ant-Shell/dnd-stretch-tech/blob/b301e287e4f2ad7ff32b6c38a97411f87d7611e3/GIFS/2022-09-19%2015.02.44.gif)
+![Viewing the Mhnster Manual](https://github.com/Ant-Shell/dnd-stretch-tech/blob/b301e287e4f2ad7ff32b6c38a97411f87d7611e3/GIFS/2022-09-19%2015.05.01.gif)
+![Searching for a Monster](https://github.com/Ant-Shell/dnd-stretch-tech/blob/b301e287e4f2ad7ff32b6c38a97411f87d7611e3/GIFS/2022-09-19%2015.05.37.gif)
 
 
 ## Technologies
@@ -28,22 +30,31 @@
 
 ## Goals, Challenges, and Wins
 ### Goals
-
+- Create a multipaged application, using TypeScript, and manipulate fetched API data.
 
 ### Challenges
 - Learning and incorporating TypeScript syntax.
+- Specifically handling "event" typing.
 
 ### Wins
-
+- Created a fully functional application that is in-line with our initial user-flow goals.
+- Worked in a collaborative, creative, and kind group dynamic.
 
 ## Possible Future Extensions
 
 
 ## Sources
- 
+ - [MDN](http://developer.mozilla.org/en-US/)
+ - [YouTube](https://www.youtube.com/)
+ - [StackOverflow](https://www.stackoverflow.com/)
+ - [W3Schools](https://www.w3schools.com/)
   
 ## Contributors
-  - [[Nick Liggett](https://github.com/NickLiggett)]
+  - [Andrew Miller](https://github.com/andrewmiller45)
+  - [Anthony Shellman](https://github.com/Ant-Shell)
+  - [Maya Kappen](https://github.com/mayakappen)
+  - [Nick Liggett](https://github.com/NickLiggett)
 
 ## Project Specs
- 
+ - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-3/stretch.html)
+ - The project repo can be found [here](https://github.com/Ant-Shell/dnd-stretch-tech)
