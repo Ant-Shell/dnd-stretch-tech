@@ -70,8 +70,8 @@ const CharacterCreator: FC<Props> = (props: Props) => {
             <h3>Character Creator</h3>
             <form onSubmit={event => props.submitForm(event, formData)}>
             { nameTakenMessage }
-            <label>Name:</label> <input type="text" id="name" onChange={event => handleChange(event)} value={formData.name} required/>
-            <label>Race:</label> <select required id="race" value={raceValue} onChange={(event) => handleChange(event)} onClick={() => setRandomizing(false)} >
+            <label>Name:</label> <input type="text" id="name" title="name" onChange={event => handleChange(event)} value={formData.name} required/>
+            <label>Race:</label> <select required id="race" title="race" value={raceValue} onChange={(event) => handleChange(event)} onClick={() => setRandomizing(false)} >
                         <option>Choose your race...</option>
                         <option value="Dragonborn">Dragonborn</option>
                         <option value="Dwarf">Dwarf</option>
@@ -83,7 +83,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
                         <option value="Human">Human</option>
                         <option value="Tiefling">Tiefling</option>
                     </select>
-            <label>Class:</label> <select required id="classs" value={classsValue} onChange={(event) => classValueHandler(event)} onClick={() => setRandomizing(false)} >
+            <label>Class:</label> <select required id="classs" title="class" value={classsValue} onChange={(event) => classValueHandler(event)} onClick={() => setRandomizing(false)} >
                         <option>Choose your class...</option>
                         <option value="Barbarian">Barbarian</option>
                         <option value="Bard">Bard</option>
@@ -98,18 +98,18 @@ const CharacterCreator: FC<Props> = (props: Props) => {
                         <option value="Warlock">Warlock</option>
                         <option value="Wizard">Wizard</option>
                     </select>
-                <div><label>HP:</label> <input type="text" id="hp" onChange={event => handleChange(event)} value={formData.hp} required/></div>
-                <div><label>AC:</label> <input type="text" id="ac" onChange={event => handleChange(event)} value={formData.ac} required/></div>
+                <div><label>HP:</label> <input type="text" id="hp" title="hit points" onChange={event => handleChange(event)} value={formData.hp} required/></div>
+                <div><label>AC:</label> <input type="text" id="ac" title="armor class" onChange={event => handleChange(event)} value={formData.ac} required/></div>
                 <div className="ability-score-wrapper">
-                    <div><label>STR</label> <input className="ability-score" type="text" id="str" onChange={event => handleChange(event)} value={formData.str} required/></div>
-                    <div><label>CON</label> <input className="ability-score" type="text" id="con" onChange={event => handleChange(event)} value={formData.con} required/></div>
-                    <div><label>DEX</label> <input className="ability-score" type="text" id="dex" onChange={event => handleChange(event)} value={formData.dex} required/></div>
-                    <div><label>WIS</label> <input className="ability-score" type="text" id="wis" onChange={event => handleChange(event)} value={formData.wis} required/></div>
-                    <div><label>INT</label> <input className="ability-score" type="text" id="int" onChange={event => handleChange(event)} value={formData.int} required/></div>
-                    <div><label>CHA</label> <input className="ability-score" type="text" id="cha" onChange={event => handleChange(event)} value={formData.cha} required/></div>
+                    <div><label>STR</label> <input className="ability-score" type="text" id="str" title="strength" onChange={event => handleChange(event)} value={formData.str} required/></div>
+                    <div><label>CON</label> <input className="ability-score" type="text" id="con" title="constitution" onChange={event => handleChange(event)} value={formData.con} required/></div>
+                    <div><label>DEX</label> <input className="ability-score" type="text" id="dex" title="dexterity" onChange={event => handleChange(event)} value={formData.dex} required/></div>
+                    <div><label>WIS</label> <input className="ability-score" type="text" id="wis" title="wisdom" onChange={event => handleChange(event)} value={formData.wis} required/></div>
+                    <div><label>INT</label> <input className="ability-score" type="text" id="int" title="intelligence" onChange={event => handleChange(event)} value={formData.int} required/></div>
+                    <div><label>CHA</label> <input className="ability-score" type="text" id="cha" title="charisma" onChange={event => handleChange(event)} value={formData.cha} required/></div>
                 </div>
                     About Me: 
-                    <div><textarea className="about-me" id="about" onChange={(event) => handleChange(event)} value={formData.about}/></div>
+                    <div><textarea className="about-me" id="about" title="about me" onChange={(event) => handleChange(event)} value={formData.about}/></div>
                     <button id="submit" type="submit">SUBMIT</button>
                     <button id="clear" onClick={(event) => clearInputs(event)}>Clear</button>
             </form>
