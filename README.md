@@ -10,9 +10,10 @@
   - The user can also navigate to the Monster Manual, where they can explore a list of "Monsters" and see the monster's details and statistics.
   
 ## Setup
-
+  - Click [here](https://ant-shell.github.io/dnd-stretch-tech/) to check out our application.
 
 ## Application in Action
+[Building a Party](GIFS/2022-09-19 15.02.44.gif)
 
 
 ## Technologies
