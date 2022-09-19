@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/dnd-stretch-tech/static/css/main.ab2c1a00.css",
-    "main.js": "/dnd-stretch-tech/static/js/main.81d31b82.js",
-    "index.html": "/dnd-stretch-tech/index.html",
-    "main.ab2c1a00.css.map": "/dnd-stretch-tech/static/css/main.ab2c1a00.css.map",
-    "main.81d31b82.js.map": "/dnd-stretch-tech/static/js/main.81d31b82.js.map"
+    "main.css": "/dungeons&documents/static/css/main.97980264.css",
+    "main.js": "/dungeons&documents/static/js/main.b257c131.js",
+    "index.html": "/dungeons&documents/index.html",
+    "main.97980264.css.map": "/dungeons&documents/static/css/main.97980264.css.map",
+    "main.b257c131.js.map": "/dungeons&documents/static/js/main.b257c131.js.map"
   },
   "entrypoints": [
-    "static/css/main.ab2c1a00.css",
-    "static/js/main.81d31b82.js"
+    "static/css/main.97980264.css",
+    "static/js/main.b257c131.js"
   ]
 }
