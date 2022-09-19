@@ -101,12 +101,12 @@ const CharacterCreator: FC<Props> = (props: Props) => {
                 <div><label>HP:</label> <input type="text" id="hp" onChange={event => handleChange(event)} value={formData.hp} required/></div>
                 <div><label>AC:</label> <input type="text" id="ac" onChange={event => handleChange(event)} value={formData.ac} required/></div>
                 <div className="ability-score-wrapper">
-                    <div><label>STR</label> <input className="ability-score" type="text" id="str" onChange={event => handleChange(event)} value={formData.str} required/></div>
-                    <div><label>CON</label> <input className="ability-score" type="text" id="con" onChange={event => handleChange(event)} value={formData.con} required/></div>
-                    <div><label>DEX</label> <input className="ability-score" type="text" id="dex" onChange={event => handleChange(event)} value={formData.dex} required/></div>
-                    <div><label>WIS</label> <input className="ability-score" type="text" id="wis" onChange={event => handleChange(event)} value={formData.wis} required/></div>
-                    <div><label>INT</label> <input className="ability-score" type="text" id="int" onChange={event => handleChange(event)} value={formData.int} required/></div>
-                    <div><label>CHA</label> <input className="ability-score" type="text" id="cha" onChange={event => handleChange(event)} value={formData.cha} required/></div>
+                    <div><label>STR:</label> <input className="ability-score" type="text" id="str" onChange={event => handleChange(event)} value={formData.str} required/></div>
+                    <div><label>CON:</label> <input className="ability-score" type="text" id="con" onChange={event => handleChange(event)} value={formData.con} required/></div>
+                    <div><label>DEX:</label> <input className="ability-score" type="text" id="dex" onChange={event => handleChange(event)} value={formData.dex} required/></div>
+                    <div><label>WIS:</label> <input className="ability-score" type="text" id="wis" onChange={event => handleChange(event)} value={formData.wis} required/></div>
+                    <div><label>INT:</label> <input className="ability-score" type="text" id="int" onChange={event => handleChange(event)} value={formData.int} required/></div>
+                    <div><label>CHA:</label> <input className="ability-score" type="text" id="cha" onChange={event => handleChange(event)} value={formData.cha} required/></div>
                 </div>
                     About Me: 
                     <div><textarea className="about-me" id="about" onChange={(event) => handleChange(event)} value={formData.about}/></div>
