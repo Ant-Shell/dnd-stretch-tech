@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     align-content: space-around;
-    border: 1px solid black;
+    border: 1px solid #041F57;
     border-radius: 8px;
     width: 26vw;
     height: 82vh;
@@ -26,7 +26,7 @@
 }
 
 .name-error-message {
-    color: #D0342C;
+    color: #FD0059;
 }
 
 form {
@@ -89,7 +89,7 @@ button {
     cursor: pointer;
     border: none;
     color: #fff;
-    background-color: #00bda7;
+    background-color: #42628D;
     border-radius: 16px;
     font-size: 12px;
     margin-bottom: 1vh;
@@ -106,7 +106,7 @@ button:hover {
 }
 
 #submit {
-    background-color: salmon;
+    background-color: #FD0059;
 }
 
 @media screen and (max-width: 600px) {

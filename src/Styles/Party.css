@@ -3,7 +3,7 @@
         flex-direction: column;
         align-items: center;
         align-content: center;
-        border: 1px solid black;
+        border: 1px solid #041F57;
         border-radius: 8px;
         width: 26vw;
         height: 82vh;
@@ -19,7 +19,7 @@
 .party-member:hover {
     cursor: pointer;
     background-color: whitesmoke;
-}
+  }
 
 .party-wrapper {
     width: 26vw;
@@ -39,7 +39,7 @@
     width: 150px;
     position: relative;
     align-self: center;
-    background-color: salmon;
+    background-color: #FD0059;
 }
 
 @media screen and (max-width: 600px) {
@@ -55,3 +55,4 @@
         width: 90px;
     }
   }
+

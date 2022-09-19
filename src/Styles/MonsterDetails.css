@@ -20,30 +20,35 @@
 
 .title {
     font-size: 3vh;
-    width: 35vw;
-    padding: 10px;
-    
+    font-weight: bolder;
+    align-self: center;
+    margin-left: 13vw;
+    margin-top: 3vh;
 }
 
 .current-monster {
-    background-color: rgba(255,255,255, 0.5);
-    border-radius: 8px;
-    opacity: 1;
-    white-space: nowrap;
+background-color: white;
+border-radius: 8px;
+width: fit-content;
+height: 10vh;
+border: 1px solid #041F57;
+box-shadow: 0 0 4px #000;
 }
 
 .search-bar {
     border-radius: 10px;
-    height: 2vh;
+    height: 2.5vh;
     width: 12vw;
+    background-color: white;
 }
 
 .search-bar-container {
     width: 20vw;
-    align-self: flex-start;
-    align-content:flex-start;
     margin-left: 10vw;
     margin-top: 2vh;
+    position: relative;
+    margin-left: 60vw;
+    background-color: white;
 }
 
 .monster-search-button {
@@ -73,7 +78,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: stretch;
-    border: 1px solid black;
+    border: 1px solid #041F57;
     border-radius: 8px;
     width: 24vw;
     height: 60vh;
@@ -114,7 +119,7 @@
 }
 .special-abilities {
     align-self: flex-start;
-    border: 1px solid black;
+    border: 1px solid #041F57;
     border-radius: 8px;
     width: 45vw;
     height: 45vh;
@@ -150,11 +155,13 @@
     font-size: 125%;
     margin: 1vw;
     width: 18vw;
-    height: 20vh;
-    border: 1px solid black;
+    height: fit-content;
+    max-height: 30vh;
+    border: 1px solid #041F57;
     border-radius: 8px;
     padding: 10px;
     box-shadow: 0 0 4px #000;
+    background-color: #F8FEFF
 }
 
 .special-ability-name {
@@ -190,7 +197,7 @@
 .proficiencies {
   margin: 10px;
   padding: 10px;
-  border: 1px solid black;
+  border: 1px solid #041F57;
   border-radius: 8px;
   width: 45vw;
   align-content: flex-start;

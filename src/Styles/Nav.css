@@ -8,19 +8,19 @@ nav {
     height: 9vh;
     font-size: 5vh;
     font-weight: bolder;
-    box-shadow: 0 0 4px #000;
-    border-bottom: 1px solid black;
     padding-bottom: 3vh;
     padding-top: 2vh;
+    
 }
 
 .app-title {
-  width: fit-content;
-  background-color: rgba(255,255,255, 0.5);
-  align-self: center;
-  margin-top: 1vh;
   border-radius: 8px;
-  white-space: nowrap;
+  width: auto;
+  height: 39%;
+  align-self: center;
+  margin-top: 8vh;
+  border-radius: 8px;
+  background-color: #F8FEFF;
 }
 
 .view-monster-page-button {
@@ -32,7 +32,7 @@ nav {
   font-size: 30%;
   border: none;
   color: #fff;
-  background-color: #00bda7;
+  background-color: #FD0059;
   border-radius: 16px;
   margin-top: 1vh;
   margin-bottom: 1vh;
@@ -52,3 +52,8 @@ nav {
   }
 }
 
+.button-container {
+  position: absolute;
+  margin-left: 2vw;
+  margin-top: 3vh;
+}
