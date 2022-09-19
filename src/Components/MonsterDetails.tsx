@@ -41,7 +41,7 @@ const MonsterDetails:FC<Props> = ({currentMonster, monsterSearchHandler, monster
                             id="search"
                             onChange={(event) => setsearchInput(event.target.value)}>
                         </input>
-                        <button className="monster-search-button" onClick={() => monsterSearchHandler(searchInput)}>SUBMIT</button>
+                        <button className="monster-search-button" onClick={() => monsterSearchHandler(searchInput)}>SEARCH</button>
                         {monsterNotFoundMesage}
                     </div>
             </header>
