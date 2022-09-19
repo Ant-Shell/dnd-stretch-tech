@@ -70,8 +70,8 @@ const CharacterCreator: FC<Props> = (props: Props) => {
             <h3>Character Creator</h3>
             <form onSubmit={event => props.submitForm(event, formData)}>
             { nameTakenMessage }
-            <label>Name:</label> <input type="text" id="name" onChange={event => handleChange(event)} value={formData.name} required/>
-            <label>Race:</label> <select required id="race" value={raceValue} onChange={(event) => handleChange(event)} onClick={() => setRandomizing(false)} >
+            <label>Name:</label> <input type="text" id="name" className="name" onChange={event => handleChange(event)} value={formData.name} required/>
+            <label>Race:</label> <select required id="race" className="race" value={raceValue} onChange={(event) => handleChange(event)} onClick={() => setRandomizing(false)} >
                         <option>Choose your race...</option>
                         <option value="Dragonborn">Dragonborn</option>
                         <option value="Dwarf">Dwarf</option>
@@ -83,7 +83,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
                         <option value="Human">Human</option>
                         <option value="Tiefling">Tiefling</option>
                     </select>
-            <label>Class:</label> <select required id="classs" value={classsValue} onChange={(event) => classValueHandler(event)} onClick={() => setRandomizing(false)} >
+            <label>Class:</label> <select required id="classs" className="class" value={classsValue} onChange={(event) => classValueHandler(event)} onClick={() => setRandomizing(false)} >
                         <option>Choose your class...</option>
                         <option value="Barbarian">Barbarian</option>
                         <option value="Bard">Bard</option>
@@ -98,8 +98,8 @@ const CharacterCreator: FC<Props> = (props: Props) => {
                         <option value="Warlock">Warlock</option>
                         <option value="Wizard">Wizard</option>
                     </select>
-                <div><label>HP:</label> <input type="text" id="hp" onChange={event => handleChange(event)} value={formData.hp} required/></div>
-                <div><label>AC:</label> <input type="text" id="ac" onChange={event => handleChange(event)} value={formData.ac} required/></div>
+                <div><label>HP:</label> <input type="text" id="hp" className="hp" onChange={event => handleChange(event)} value={formData.hp} required/></div>
+                <div><label>AC:</label> <input type="text" id="ac" className="ac" onChange={event => handleChange(event)} value={formData.ac} required/></div>
                 <div className="ability-score-wrapper">
                     <div><label>STR:</label> <input className="ability-score" type="text" id="str" onChange={event => handleChange(event)} value={formData.str} required/></div>
                     <div><label>CON:</label> <input className="ability-score" type="text" id="con" onChange={event => handleChange(event)} value={formData.con} required/></div>
