@@ -48,8 +48,8 @@ const App: FC = () => {
     <main>
       <Nav />
       <Switch>
-        <Route exact path="/" render={() => <CharacterSection party={party} submitForm={submitForm} deleteMember={deleteMember} killemAll={killemAll} hasError={hasError}/>}/>
-        <Route exact path="/monsters" render={() => <MonsterSection monsters={monsters}/>}/>
+        <Route exact path="/dnd-stretch-tech/" render={() => <CharacterSection party={party} submitForm={submitForm} deleteMember={deleteMember} killemAll={killemAll} hasError={hasError}/>}/>
+        <Route exact path="/dnd-stretch-tech/monsters" render={() => <MonsterSection monsters={monsters}/>}/>
         <Route path="*" render={()=> <Error/>}/>
       </Switch>
     </main>

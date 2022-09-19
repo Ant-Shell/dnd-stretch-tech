@@ -21,6 +21,7 @@ const Nav:FC = () => {
     }
 
     return (
+    
             <nav>
             <header> <img className="app-title" key="appTitle" src='https://user-images.githubusercontent.com/102932448/190942053-3537afa6-4478-4ae5-bf39-e9af6e7210ff.png' alt="Dungeons & Documents"/></header>
                 <div className="button-container">

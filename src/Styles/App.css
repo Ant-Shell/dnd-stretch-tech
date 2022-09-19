@@ -19,6 +19,7 @@ body {
   background-image: url('https://user-images.githubusercontent.com/102932448/190929437-4534d55a-604e-4277-8ae9-28d078ec4fcc.png');
   background-position-y: center;
   background-size: 100%;
+  overflow-y: scroll;
 }
 
 #root {
