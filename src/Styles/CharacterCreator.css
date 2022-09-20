@@ -108,3 +108,11 @@ button:hover {
 #submit {
     background-color: #FD0059;
 }
+
+@media screen and (max-width: 750px) {
+    div > button,
+    form > button {
+        height: 3vh;
+        width: 15vw;
+    }
+  }
