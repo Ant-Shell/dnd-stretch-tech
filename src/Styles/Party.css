@@ -37,4 +37,5 @@
     position: relative;
     align-self: center;
     background-color: #FD0059;
+    white-space: nowrap;
 }

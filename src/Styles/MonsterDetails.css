@@ -204,3 +204,17 @@
         font-size: x-large;
     }
   }
+
+  @media screen and (max-width: 689px) {
+    .monster-search-button {
+        width: 17vw;
+    }
+  }
+
+  @media screen and (max-height: 689px) {
+    .monster-search-button {
+        width: 16vw;
+        height: 5vh;
+    }
+  }
+  

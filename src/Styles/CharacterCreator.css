@@ -113,6 +113,14 @@ button:hover {
     div > button,
     form > button {
         height: 3vh;
-        width: 15vw;
+        width: 22vw;
+    }
+  }
+
+  @media screen and (max-height: 414px) {
+    div > button,
+    form > button {
+        height: 5vh;
+        width: 17vw;
     }
   }
