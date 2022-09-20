@@ -3,7 +3,7 @@
 
 describe('Dungeons and Documents!!! Kill all those classs\'', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:3000/')
+        cy.visit('http://localhost:3000/dnd-stretch-tech/')
         //can remove viewport settings, added very large screen for button access.
         cy.viewport(2000, 2000)
     })
