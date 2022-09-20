@@ -41,7 +41,11 @@
 - Worked in a collaborative, creative, and kind group dynamic.
 
 ## Possible Future Extensions
-
+- The ability to search for monsters by their various attributes.
+- Present even more character information, based fetching data.
+- The ability to favorite created characters and monsters.
+- A DM related view, for campaign building.
+- A built-in dice roller for taking turns, and more!
 
 ## Sources
  - [MDN](http://developer.mozilla.org/en-US/)
