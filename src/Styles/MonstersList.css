@@ -1,38 +1,36 @@
 .monsters {
-display: flex;
-flex-direction: column;
-border-style: 1px solid black;
-width: 15vw;
-height: 100vh;
-overflow: auto;
-align-self: flex-start;
-background-color: white;
-box-shadow: 0 0 4px #000;
-border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  border-style: 1px solid black;
+  width: 15vw;
+  height: 100vh;
+  overflow: auto;
+  align-self: flex-start;
+  background-color: white;
+  box-shadow: 0 0 4px #000;
+  border-radius: 8px;
 }
-
 
 .monsters h2 {
-font-size: 3vh;
+  font-size: 3vh;
 }
 
-
 .single-monster {
-display: flex;
-justify-content: flex-start;
-align-items: center;
-border-bottom: 1px solid black;
-margin: 0px;
-height: 2vh;
-padding: 5px;
-padding-left: 20px;
-font-size: 1.5vh;
-white-space: nowrap;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin: 0px;
+  height: 2vh;
+  padding: 5px;
+  padding-left: 20px;
+  font-size: 1.5vh;
+  white-space: nowrap;
 }
 
 .single-monster:hover {
-text-decoration:underline;
-cursor: pointer;
-box-shadow: 0px 0px 4px #000;
-background-color: whitesmoke;
+  text-decoration:underline;
+  cursor: pointer;
+  box-shadow: 0px 0px 4px #000;
+  background-color: whitesmoke;
 }
