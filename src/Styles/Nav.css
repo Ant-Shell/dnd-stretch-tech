@@ -39,9 +39,20 @@ header {
   margin-right: -5vw;
 }
 
+.search-error-message {
+  white-space: nowrap;
+}
+
 @media screen and (max-width: 983px) {
   .view-monster-page-button {
     height: 6vh;
     width: 8vw;
+  }
+}
+
+@media screen and (max-height: 983px) {
+  .view-monster-page-button {
+    height: 6vh;
+    width: 16vw;
   }
 }
