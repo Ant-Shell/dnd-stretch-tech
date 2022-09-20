@@ -47,6 +47,7 @@ header {
   .view-monster-page-button {
     height: 6vh;
     width: 8vw;
+    font-size: x-small;
   }
 }
 
