@@ -1,7 +1,6 @@
 import {FC} from "react"
 import { Link } from "react-router-dom"
 import '../Styles/Error.css'
-//create css file
 
 const Error:FC = () => {
     return (

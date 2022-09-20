@@ -16,7 +16,7 @@ const MonstersList:FC<Props> = (props) => {
         <div className="monsters">
             <h2>Monster List</h2>
             <div className="monsters-list">
-            {monsterList.length ? monsterList : <h1 className="error-msg">No monsters available at this time!</h1>}
+                {monsterList.length ? monsterList : <h1 className="error-msg">No monsters available at this time!</h1>}
             </div>
         </div>
     )

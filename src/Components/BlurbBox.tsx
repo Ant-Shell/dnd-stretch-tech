@@ -17,7 +17,7 @@ const BlurbBox:FC<Props> = ({ currentClass, character }) => {
         return acc
    }, [] as Array<string>)
 
-    return (                                                    // Have Randomize button reset "character" to undefined
+    return (
         (character) ? <div className="blurb-box">               
                             <h1>{character.name}</h1>
                             <p>Class: {character.classs}</p>
