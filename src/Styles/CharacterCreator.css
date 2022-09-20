@@ -124,3 +124,10 @@ button:hover {
         width: 17vw;
     }
   }
+
+  @media screen and (max-height: 414px) {
+    h3 {
+        font-size: 30px;
+        margin-bottom: 20vh;
+    }
+  }
