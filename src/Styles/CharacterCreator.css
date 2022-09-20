@@ -108,3 +108,26 @@ button:hover {
 #submit {
     background-color: #FD0059;
 }
+
+@media screen and (max-width: 750px) {
+    div > button,
+    form > button {
+        height: 3vh;
+        width: 22vw;
+    }
+  }
+
+  @media screen and (max-height: 414px) {
+    div > button,
+    form > button {
+        height: 5vh;
+        width: 17vw;
+    }
+  }
+
+  @media screen and (max-height: 414px) {
+    h3 {
+        font-size: 30px;
+        margin-bottom: 20vh;
+    }
+  }

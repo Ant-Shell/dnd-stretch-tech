@@ -27,11 +27,10 @@ const MonsterDetails:FC<Props> = ({currentMonster, monsterSearchHandler, monster
         (currentMonster) &&
         <div className="monster-details">
             <div>
-                   
-                    <header className="head">
-                        <div className="title">
-                            <h1 className="current-monster">{currentMonster.name}</h1>
-                        </div>
+                <header className="head">
+                    <div className="title">
+                        <h1 className="current-monster">{currentMonster.name}</h1>
+                    </div>
                     <div className="search-bar-container">
                         <input
                             type="text"
@@ -41,11 +40,11 @@ const MonsterDetails:FC<Props> = ({currentMonster, monsterSearchHandler, monster
                             id="search"
                             onChange={(event) => setsearchInput(event.target.value)}>
                         </input>
-                        <button className="monster-search-button" onClick={() => monsterSearchHandler(searchInput)}>SUBMIT</button>
+                        <button className="monster-search-button" onClick={() => monsterSearchHandler(searchInput)}>SEARCH</button>
                         {monsterNotFoundMesage}
                     </div>
-            </header>
-                </div>
+                </header>
+            </div>
             <div className="stat-ability-wrapper">
                 <div className="monster-stats">
                     <h2 className="stat-title">Stats</h2>
@@ -57,11 +56,8 @@ const MonsterDetails:FC<Props> = ({currentMonster, monsterSearchHandler, monster
                     <p className="monster-stat">Languages: {currentMonster.languages}</p>
                     <p className="monster-stat">AC: {currentMonster.armor_class}</p>
                     <p className="monster-stat">HP: {currentMonster.hit_points}</p>
-                    
                 </div>
-                    
-                <div className = "container">
-                       
+                <div className = "container">   
                 <div className="special-abilities">
                     <h2>Special Abilities</h2>
                     <div className="special-wrapper">
@@ -71,10 +67,10 @@ const MonsterDetails:FC<Props> = ({currentMonster, monsterSearchHandler, monster
                     <div className="proficiencies">
                         <h3>Proficiencies</h3>
                         <div className="proficiency-wrapper">
-                        {(!proficiencies.length) ? <h3>No proficiencies.</h3> : proficiencies}
+                            {(!proficiencies.length) ? <h3>No proficiencies.</h3> : proficiencies}
                         </div>
                     </div>
-                    </div>
+                </div>
             </div>
         </div>
     )

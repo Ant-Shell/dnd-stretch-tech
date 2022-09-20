@@ -34,9 +34,8 @@
 }
 
 .current-monster {
-width: fit-content;
-height: 10vh;
-
+    width: fit-content;
+    height: 10vh;
 }
 
 .search-bar {
@@ -111,7 +110,6 @@ height: 10vh;
     align-items:flex-start;
     flex: 1, 1, content;
     padding: 10px;
-
     margin-left: 4vw;
 }
 .special-abilities {
@@ -120,7 +118,6 @@ height: 10vh;
     border-radius: 8px;
     width: 45vw;
     height: fit-content;
-    
     padding: 10px;
     margin: 10px;
     box-shadow: 0 0 4px #000;
@@ -183,7 +180,6 @@ height: 10vh;
   justify-content: space-between;
   align-items: flex-start;
   height: auto;
-
 }
 
 .proficiencies {
@@ -200,6 +196,25 @@ height: 10vh;
 }
 
 .proficiencies h3 {
-font-size: 3vh;
+    font-size: 3vh;
 }
 
+@media screen and (max-width: 689px) {
+    .current-monster {
+        font-size: x-large;
+    }
+  }
+
+  @media screen and (max-width: 689px) {
+    .monster-search-button {
+        width: 17vw;
+    }
+  }
+
+  @media screen and (max-height: 689px) {
+    .monster-search-button {
+        width: 16vw;
+        height: 5vh;
+    }
+  }
+  
