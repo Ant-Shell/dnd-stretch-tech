@@ -27,6 +27,7 @@ height: 2vh;
 padding: 5px;
 padding-left: 20px;
 font-size: 1.5vh;
+white-space: nowrap;
 }
 
 .single-monster:hover {
