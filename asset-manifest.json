@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/dnd-stretch-tech/static/css/main.97980264.css",
-    "main.js": "/dnd-stretch-tech/static/js/main.2b7c1595.js",
+    "main.css": "/dnd-stretch-tech/static/css/main.8c971dea.css",
+    "main.js": "/dnd-stretch-tech/static/js/main.d68b1a98.js",
     "index.html": "/dnd-stretch-tech/index.html",
-    "main.97980264.css.map": "/dnd-stretch-tech/static/css/main.97980264.css.map",
-    "main.2b7c1595.js.map": "/dnd-stretch-tech/static/js/main.2b7c1595.js.map"
+    "main.8c971dea.css.map": "/dnd-stretch-tech/static/css/main.8c971dea.css.map",
+    "main.d68b1a98.js.map": "/dnd-stretch-tech/static/js/main.d68b1a98.js.map"
   },
   "entrypoints": [
-    "static/css/main.97980264.css",
-    "static/js/main.2b7c1595.js"
+    "static/css/main.8c971dea.css",
+    "static/js/main.d68b1a98.js"
   ]
 }
