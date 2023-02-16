@@ -30,6 +30,7 @@ const BlurbBox:FC<Props> = ({ currentClass, character }) => {
             {(currentClass) ? <h1>The {currentClass}</h1>: 
             <div>
                 <h1>Welcome to Dungeons & Documents!</h1>
+                <div className="the-blurb">
                 <p>Where all your character creation problems come to an end! To the left you will see the Character Creation Form. 
                     There you can fill out all the neccessary information and submit your character. 
                     Upon submission, your hero will appear in the "Party Block" to the right.
@@ -40,6 +41,7 @@ const BlurbBox:FC<Props> = ({ currentClass, character }) => {
                 <p>Oh! Don't forget to check out the Monster Manual Page to get the scoop on possible friends or foes you may encounter during your adventures!
                     After all... preparation is paramount.
                 </p>
+                </div>
             </div>}
             <article className="the-blurb">{theBlurb}</article>
         </div>
