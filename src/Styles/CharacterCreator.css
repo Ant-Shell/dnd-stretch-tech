@@ -81,11 +81,11 @@ select {
     font-size: 12px;
 }
 
-button {
+.form-button {
     padding-top: 4px;
     padding-bottom: 4px;
     height: 3vh;
-    width: 6vw;
+    width: 8vw;
     cursor: pointer;
     border: none;
     color: #fff;
@@ -95,7 +95,7 @@ button {
     margin-bottom: 1vh;
 }
 
-button:hover {
+.form-button:hover {
     cursor: pointer;
     box-shadow: 0 0 4px #000;
    

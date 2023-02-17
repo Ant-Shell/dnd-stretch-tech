@@ -28,7 +28,7 @@ const Nav: FC = () => {
           src="https://user-images.githubusercontent.com/102932448/190942053-3537afa6-4478-4ae5-bf39-e9af6e7210ff.png"
           alt="Dungeons & Documents"
         />
-        <Link to={`/dnd-stretch-tech/${url}`}>
+        <Link to={`/dnd-stretch-tech/${url}`} className="nav-link">
           <button
             id="changePage"
             className="view-monster-page-button"

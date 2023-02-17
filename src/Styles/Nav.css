@@ -1,59 +1,29 @@
-nav {
-    flex: 20%;
-    font-size: 5vh;
-    font-weight: bolder;
-    padding-bottom: 3vh;
-    padding-top: 2vh;
-}
-
 header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-content: center;
-  width: 100vw;
-  height: 8vh;
+  flex-direction: column;
 }
 
 .app-title {
-  border-radius: 8px;
-  width: auto;
-  height: 100%;
-  align-self: center;
-  border-radius: 8px;
-  background-color: #F8FEFF;
-  margin-left: 25vw;
+width: 50%;
+align-self: center;
+margin-top: 1%;
+}
+
+.nav-link {
+  align-self: flex-end;
+  width: 10%;
+  margin-top: -4%;
+  margin-bottom: 4%;
+  margin-right: 2%;
 }
 
 .view-monster-page-button {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  height: 4vh;
-  width: 8vw;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
-  font-size: 30%;
   border: none;
   color: #fff;
   background-color: #FD0059;
   border-radius: 16px;
-  margin-right: -5vw;
-}
-
-.search-error-message {
-  white-space: nowrap;
-}
-
-@media screen and (max-width: 983px) {
-  .view-monster-page-button {
-    height: 6vh;
-    width: 8vw;
-    font-size: x-small;
-  }
-}
-
-@media screen and (max-height: 983px) {
-  .view-monster-page-button {
-    height: 6vh;
-    width: 16vw;
-  }
+  padding: 5%;
 }

@@ -285,14 +285,14 @@ const CharacterCreator: FC<Props> = (props: Props) => {
             value={formData.about}
           />
         </div>
-        <button id="submit" type="submit">
+        <button id="submit" className="form-button" type="submit">
           SUBMIT
         </button>
-        <button id="clear" onClick={(event) => clearInputs(event)}>
+        <button id="clear" className="form-button" onClick={(event) => clearInputs(event)}>
           Clear
         </button>
       </form>
-      <button id="randoButton" onClick={(event) => randomize(event)}>
+      <button id="randoButton" className="form-button" onClick={(event) => randomize(event)}>
         Random
       </button>
     </div>
