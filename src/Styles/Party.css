@@ -29,13 +29,19 @@
 }
 
 .delete {
-    height: 2vh;
-    width: auto;
+    color: white;
+    background-color: #42628D;
+    border: none;
+    border-radius: 15px;
+    padding: 1%;
+    margin: 2%;
+    width: 20%;
 }
 
 #killAll {
-    position: relative;
-    align-self: center;
+    color: white;
     background-color: #FD0059;
-    white-space: nowrap;
+    border: none;
+    border-radius: 15px;
+    padding: 2%;
 }
