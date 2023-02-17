@@ -4,8 +4,8 @@
     align-items: center;
     border: 1px solid #041F57;
     border-radius: 8px;
-    width: 26vw;
-    height: 82vh;
+    width: 26%;
+    height: 100%;
     overflow-wrap: break-word;
     overflow-y: scroll;
     box-shadow: 0 0 4px #000;
@@ -22,7 +22,7 @@ form {
     flex-direction: column;
     align-items: center;
     height: auto;
-    width: 65%;
+    width: 100%;
     justify-content: space-evenly;
 }
 
@@ -33,7 +33,7 @@ form {
     font-size: 14px;
     max-width: 175px;
     width: 100%;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
 }
 
 .name-error-message {
@@ -48,7 +48,11 @@ select {
     cursor: pointer;
     width: 100%;
     max-width: 120px;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
+}
+
+.stat-block-wrapper {
+    display: flex;
 }
 
 .stat-block {
@@ -67,14 +71,14 @@ select {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: auto;
+    width: 100%;
 }
 
 .ability-score-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5%;
+    margin: 3%;
     width: 35px;
 }
 
@@ -86,17 +90,14 @@ select {
 }
 
 .about-me {
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
     height: 14vh;
     width: 12vw;
     border-radius: 8px;
-    margin-bottom: 3vh;
+    margin-bottom: 5%;
     font-size: 16px;
     font-family: 'EB Garamond', serif;
 }
-
-
-
 
 .form-button {
     padding-top: 4px;

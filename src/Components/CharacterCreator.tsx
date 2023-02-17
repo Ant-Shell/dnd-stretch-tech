@@ -179,27 +179,29 @@ const CharacterCreator: FC<Props> = (props: Props) => {
           <option value="Warlock">Warlock</option>
           <option value="Wizard">Wizard</option>
         </select>
-        <div className="stat-block">
-          <label>HP:</label>{" "}
-          <input
-            type="text"
-            id="hp"
-            title="hit points"
-            onChange={(event) => handleChange(event)}
-            value={formData.hp}
-            required
-          />
-        </div>
-        <div className="stat-block">
-          <label>AC:</label>{" "}
-          <input
-            type="text"
-            id="ac"
-            title="armor class"
-            onChange={(event) => handleChange(event)}
-            value={formData.ac}
-            required
-          />
+        <div className="stat-block-wrapper">
+          <div className="stat-block">
+            <label>HP:</label>{" "}
+            <input
+              type="text"
+              id="hp"
+              title="hit points"
+              onChange={(event) => handleChange(event)}
+              value={formData.hp}
+              required
+            />
+          </div>
+          <div className="stat-block">
+            <label>AC:</label>{" "}
+            <input
+              type="text"
+              id="ac"
+              title="armor class"
+              onChange={(event) => handleChange(event)}
+              value={formData.ac}
+              required
+            />
+          </div>
         </div>
         <div className="ability-score-wrapper">
           <div className="ability-score-item">
@@ -288,12 +290,20 @@ const CharacterCreator: FC<Props> = (props: Props) => {
         <button id="submit" className="form-button" type="submit">
           SUBMIT
         </button>
-        <button id="clear" className="form-button" onClick={(event) => clearInputs(event)}>
+        <button
+          id="clear"
+          className="form-button"
+          onClick={(event) => clearInputs(event)}
+        >
           Clear
         </button>
-      <button id="randoButton" className="form-button" onClick={(event) => randomize(event)}>
-        Random
-      </button>
+        <button
+          id="randoButton"
+          className="form-button"
+          onClick={(event) => randomize(event)}
+        >
+          Random
+        </button>
       </form>
     </div>
   );

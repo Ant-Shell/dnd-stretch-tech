@@ -1,7 +1,42 @@
 .main-section {
-    width: 100%;
-    height: 100%;
     display: flex;
-    justify-content: space-around;
-    margin-top: 1%;
+    justify-content: space-evenly;
+    height: 83%;
+    margin-top: -1%;
+}
+
+@media screen and (max-height: 730px) {
+    .main-section {
+        height: 80%;
+    }
+}
+
+@media screen and (max-height: 630px) {
+    .main-section {
+        height: 77%;
+    }
+}
+
+@media screen and (max-height: 530px) {
+    .main-section {
+        height: 73%;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .main-section {
+        height: 65%;
+    }
+}
+
+@media screen and (max-height: 350px) {
+    .main-section {
+        height: 60%;
+    }
+}
+
+@media screen and (max-height: 310px) {
+    .main-section {
+        height: 50%;
+    }
 }
