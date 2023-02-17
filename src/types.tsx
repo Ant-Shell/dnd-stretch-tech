@@ -56,7 +56,7 @@ export type MonsterStructure = {
     type: string
     alignment: string
     languages: string
-    armor_class: number
+    armor_class: Array<{type: string, value: number}>
     hit_points: number
     xp: number
     proficiencies: {

@@ -78,7 +78,7 @@ const MonsterDetails: FC<Props> = ({
             <p className="monster-stat">
               Languages: {currentMonster.languages}
             </p>
-            <p className="monster-stat">AC: {currentMonster.armor_class}</p>
+            <p className="monster-stat">AC: {currentMonster.armor_class[0].value}</p>
             <p className="monster-stat">HP: {currentMonster.hit_points}</p>
           </div>
           <div className="container">
