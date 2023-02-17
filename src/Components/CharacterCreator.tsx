@@ -119,7 +119,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
   }, [randomizing, props, formData.classs, formData.race]);
 
   const nameTakenMessage = props.hasError === true && (
-    <span className="name-error-message">Duplicate name, try again.</span>
+    <span className="name-error-message">* Duplicate name, try again.</span>
   );
 
   return (
@@ -179,7 +179,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
           <option value="Warlock">Warlock</option>
           <option value="Wizard">Wizard</option>
         </select>
-        <div>
+        <div className="stat-block">
           <label>HP:</label>{" "}
           <input
             type="text"
@@ -190,7 +190,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
             required
           />
         </div>
-        <div>
+        <div className="stat-block">
           <label>AC:</label>{" "}
           <input
             type="text"
@@ -202,7 +202,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
           />
         </div>
         <div className="ability-score-wrapper">
-          <div>
+          <div className="ability-score-item">
             <label>STR</label>{" "}
             <input
               className="ability-score"
@@ -214,7 +214,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
               required
             />
           </div>
-          <div>
+          <div className="ability-score-item">
             <label>CON</label>{" "}
             <input
               className="ability-score"
@@ -226,7 +226,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
               required
             />
           </div>
-          <div>
+          <div className="ability-score-item">
             <label>DEX</label>{" "}
             <input
               className="ability-score"
@@ -238,7 +238,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
               required
             />
           </div>
-          <div>
+          <div className="ability-score-item">
             <label>WIS</label>{" "}
             <input
               className="ability-score"
@@ -250,7 +250,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
               required
             />
           </div>
-          <div>
+          <div className="ability-score-item">
             <label>INT</label>{" "}
             <input
               className="ability-score"
@@ -262,7 +262,7 @@ const CharacterCreator: FC<Props> = (props: Props) => {
               required
             />
           </div>
-          <div>
+          <div className="ability-score-item">
             <label>CHA</label>{" "}
             <input
               className="ability-score"
@@ -291,10 +291,10 @@ const CharacterCreator: FC<Props> = (props: Props) => {
         <button id="clear" className="form-button" onClick={(event) => clearInputs(event)}>
           Clear
         </button>
-      </form>
       <button id="randoButton" className="form-button" onClick={(event) => randomize(event)}>
         Random
       </button>
+      </form>
     </div>
   );
 };

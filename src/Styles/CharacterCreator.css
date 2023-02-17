@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-content: space-around;
     border: 1px solid #041F57;
     border-radius: 8px;
     width: 26vw;
@@ -13,37 +12,77 @@
     background-color: white;
 }
 
-.ability-score-wrapper {
-    display: flex;
-    justify-content: space-around;
-}
-
-.ability-score {
-    width: 2vw;
-    height: 2vh;
-    border-radius: 8px;
-    border: 1px solid grey;
-}
-
-.name-error-message {
-    color: #FD0059;
+h3 {
+    font-weight: bold;
+    font-size: 24px;
 }
 
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 65vh;
+    height: auto;
+    width: 65%;
     justify-content: space-evenly;
 }
 
 #name {
     border-radius: 8px;
     border: 1px solid grey;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 5px;
     font-size: 14px;
+    max-width: 175px;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.name-error-message {
+    color: #FD0059;
+}
+
+select {
+    background-color: white;
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 120px;
+    margin-bottom: 5%;
+}
+
+.stat-block {
+    margin-bottom: 3%;
+}
+
+#ac, #hp {
+    border-radius: 8px;
+    border: 1px solid grey;
+    width: 25px;
+    text-align: center;
+    padding: 3%;
+}
+
+.ability-score-wrapper {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    width: auto;
+}
+
+.ability-score-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5%;
+    width: 35px;
+}
+
+.ability-score {
+    width: 80%;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid grey;
 }
 
 .about-me {
@@ -56,36 +95,14 @@ form {
     font-family: 'EB Garamond', serif;
 }
 
-#ac, #hp {
-    border-radius: 8px;
-    border: 1px solid grey;
-    width: 3vw;
-    height: 3vh;
-}
 
-h3 {
-    font-weight: bold;
-    font-size: 24px;
-}
 
-select {
-    background-color: white;
-    padding: 16px;
-    border: 1px solid grey;
-    border-radius: 8px;
-    cursor: pointer;
-    width: 10vw;
-    height: 5vh;
-    padding-bottom: 1vh;
-    margin-bottom: 1vh;
-    font-size: 12px;
-}
 
 .form-button {
     padding-top: 4px;
     padding-bottom: 4px;
-    height: 3vh;
-    width: 8vw;
+    width: 100%;
+    max-width: 100px;
     cursor: pointer;
     border: none;
     color: #fff;
@@ -95,39 +112,12 @@ select {
     margin-bottom: 1vh;
 }
 
+#submit {
+    background-color: #FD0059;
+}
+
 .form-button:hover {
     cursor: pointer;
     box-shadow: 0 0 4px #000;
    
 }
-
-#randoButton {
-    margin: 1vh;
-}
-
-#submit {
-    background-color: #FD0059;
-}
-
-@media screen and (max-width: 750px) {
-    div > button,
-    form > button {
-        height: 3vh;
-        width: 22vw;
-    }
-  }
-
-  @media screen and (max-height: 414px) {
-    div > button,
-    form > button {
-        height: 5vh;
-        width: 17vw;
-    }
-  }
-
-  @media screen and (max-height: 414px) {
-    h3 {
-        font-size: 30px;
-        margin-bottom: 20vh;
-    }
-  }
