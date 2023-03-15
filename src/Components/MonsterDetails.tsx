@@ -12,8 +12,8 @@ const MonsterDetails:FC<Props> = ({currentMonster, monsterSearchHandler, monster
 
     const [searchInput, setsearchInput] = useState<string>("")
 
-    const proficiencies = currentMonster.proficiencies.map((prof) => {
-        return <p>{prof.proficiency.name}: {prof.value}</p>
+    const proficiencies = currentMonster.proficiencies.map((prof, index) => {
+        return <p key={index}>{prof.proficiency.name}: {prof.value}</p>
     })
 
     const specialAbilities = currentMonster.special_abilities.map((spec) => {
@@ -22,7 +22,7 @@ const MonsterDetails:FC<Props> = ({currentMonster, monsterSearchHandler, monster
     })
 
     const monsterNotFoundMesage = monsterNotFound === true && <span className="search-error-message">Monster not found.</span>
-
+    console.log(currentMonster) // Verifying data, will remove
     return (
         (currentMonster) &&
         <div className="monster-details">
@@ -54,7 +54,7 @@ const MonsterDetails:FC<Props> = ({currentMonster, monsterSearchHandler, monster
                     <p className="monster-stat">Type: {currentMonster.type}</p>
                     <p className="monster-stat">Alignment: {currentMonster.alignment}</p>
                     <p className="monster-stat">Languages: {currentMonster.languages}</p>
-                    <p className="monster-stat">AC: {currentMonster.armor_class}</p>
+                    <p className="monster-stat">AC: {currentMonster.armor_class}</p> {/* Issue here? AC is an array of objects, change in API perhaps? */}
                     <p className="monster-stat">HP: {currentMonster.hit_points}</p>
                 </div>
                 <div className = "container">   
