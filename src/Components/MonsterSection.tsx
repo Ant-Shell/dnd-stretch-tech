@@ -20,7 +20,7 @@ const MonsterSection:FC<Props> = (props) => {
         type: "aberration",
         alignment: "lawful evil",
         languages: "Deep Speech, telepathy 120 ft.",
-        armor_class: 17,
+        armor_class: [{type: "natural", value: 17}],
         hit_points: 135,
         xp: 5900,
         proficiencies: [{value: 6, proficiency: {name: "Saving Throw: CON"}}, {value: 8, proficiency: {name: "Saving Throw: INT"}}, {value: 6,proficiency: { name: "Saving Throw: WIS"}}, {value: 12,proficiency: {name: "Skill: History"}}, {value: 10,proficiency: {name: "Skill: History"}}],
